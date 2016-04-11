@@ -1,0 +1,647 @@
+			/* ------------------------------ */
+			/* Various reusable UI components */
+			/* ------------------------------ */
+
+
+/* ------------------------------ */
+/*          Icons & Buttons       */
+/* ------------------------------ */
+// ------------ Pencil
+.pencil-icon {
+  background: url('../assets/images/asset-icon-pencil.png') no-repeat center center;
+  background-size: 1rem;
+}
+.pencil-icon-hover {
+  @include transition(background 0.2s ease-out);
+  &:hover {
+    @include transition(background 0.3s ease-in);
+    background: url('../assets/images/asset-icon-pencil-hover.png') no-repeat center center;
+    background-size: 1rem;   
+  }
+}
+// ------------ Delete (cross)
+.delete-icon {
+  background: url('../assets/images/asset-icon-delete.png') no-repeat center center;
+  background-size: 0.7rem;
+}
+.delete-icon-hover {
+  @include transition(background 0.2s ease-out);
+  &:hover {
+    @include transition(background 0.3s ease-in);
+    background: url('../assets/images/asset-icon-delete-hover.png') no-repeat center center;
+    background-size: 0.7rem;
+  }
+}
+// ------------ Delete (trash)
+.trash-icon {
+  background: url('../assets/images/asset-icon-trash.png') no-repeat center center;
+  background-size: 0.8rem;
+}
+.trash-icon-hover {
+  @include transition(background 0.2s ease-out);
+  &:hover {
+    @include transition(background 0.3s ease-in);
+    background: url('../assets/images/asset-icon-trash-hover.png') no-repeat center center;
+    background-size: 0.8rem;
+  }
+}
+// ------------ Expand (three dots)
+.expand-icon {
+  background: url('../assets/images/asset-icon-expand.png') no-repeat center center;
+  background-size: .2rem;
+}
+.expand-icon-hover {
+  @include transition(background 0.2s ease-out);
+  &:hover {
+    @include transition(background 0.3s ease-in);
+    background: url('../assets/images/asset-icon-expand-hover.png') no-repeat center center;
+    background-size: .2rem;
+  }
+}
+
+// "actions" box containing edit, delete and expand <a>
+.actions,
+%actions {
+  > a {text-indent:-9999px;}
+  .delete {
+    cursor: pointer;
+    @include size(1rem);
+    display: inline-block;
+    @extend .trash-icon;
+    @extend .trash-icon-hover;
+  }
+  .edit {
+    cursor: pointer;
+    @include size(1rem);
+    display: inline-block;
+    @extend .pencil-icon;
+    @extend .pencil-icon-hover;
+  }
+  .expand {
+    cursor: pointer;
+    @include size(1rem);
+    display: inline-block;
+    @extend .expand-icon;
+    @extend .expand-icon-hover;
+    &.event-open {
+      @extend .delete-icon;
+      @extend .delete-icon-hover;
+    }
+  }
+}
+/*  ----   L I G H T   B T N */
+//  light btn style (transparent, light radius)
+//  optional class : email, download, upload (add 2 span inside, one .hidden)
+.light-btn {
+  display: block;
+  width: 100%;
+  line-height: 3rem;
+  height: 3.3rem;
+  margin-bottom: 1rem;
+  &:last-of-type {margin-bottom: 0;}
+
+  background: transparent;
+  outline: none;
+  border: 1px solid #d7d7d7;
+  border-radius:4px; 
+
+  text-align: center;
+  font-family: $base-font;
+  color: $font-middle;
+  font-size: 1.3rem;
+  letter-spacing: .08rem;
+
+  &.white {
+    color: white; 
+    border-color: white;
+    &:hover {
+      background:rgba(0,0,0,0.2);
+    }
+  }
+
+  &-block {
+    display: block;
+    max-width: 23rem;
+    margin: 3.5rem auto;
+  }
+
+  span {cursor: pointer;}
+
+  .hidden {
+    @include size(100%);
+    display: none;
+
+    text-align: center;
+    font-family: $base-font;
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: .05rem;
+
+    padding-left: 2.5rem;
+    position: relative;
+    &:before {
+      content: " ";
+      @include size(2.5rem 100%);
+      display: block; position: absolute; left: 30%;
+    }
+  }
+  &.email {
+    .hidden {
+      &:before {
+        background: url('../assets/images/asset-icon-email.png') no-repeat left center;
+        background-size: 1.2rem;
+      }
+    }
+  }
+  &.download {
+    .hidden {
+      &:before {
+        background: url('../assets/images/asset-icon-download.png') no-repeat left center;
+        background-size: 0.8rem;
+      }
+    }
+  }
+  &.upload {
+    .hidden {
+      &:before {
+        background: url('../assets/images/asset-icon-download.png') no-repeat left center;
+        background-size: 0.8rem;
+        @include transform(rotate(180deg));
+      }
+    }
+  }
+  @include transition(background 0.25s $ease-in-out-sine);
+
+  &:hover {
+    background: $brand-main;
+    color: white;
+    position: relative;
+
+    overflow: hidden;
+    span:not(.hidden) {
+      display: none;
+    }
+    span.hidden {
+      display: block;
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.no-padd {
+    &:hover {
+      span.hidden {
+        padding-left: 0;
+        &:before {
+          left: 5%;
+        }
+      }
+    }
+  }
+
+  &.btn-block {
+    display: block;
+    width: 16rem;
+    margin: 0 auto;
+  }
+}
+
+/*  ----   B A S E  B T N  */
+//  Basic call-to-action button with main brand color 
+//  Available classes : white, -block, -inline 
+.btn,
+%btn {
+  display: inline-block;
+  min-width: 28rem;
+  line-height: 4.3rem;
+  background: transparent;
+  padding: 0 2rem;
+
+  font-family: $base-font;
+  color: $brand-main;
+  text-transform: uppercase;
+  text-align: center;
+
+  border:1px solid $brand-main;
+  border-radius: 3.1rem;
+
+  @include transition(all 0.25s $ease-in-out-sine);
+  &:hover {
+    @include transition(all 0.25s $ease-in-out-sine);
+    background: $brand-main;
+    color: white;
+  }
+  &:active {
+    box-shadow: inset 0px 1px 5px rgba(0,0,0,0.5);
+  }
+
+
+  &.white {
+    background:transparent;
+    border-color: white;
+    color: white;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+  &.light-white {
+    background: transparent;
+    border-color: rgba(255,255,255,0.5);
+    color: white;
+
+    &:hover {
+      border-color: white;
+      background:rgba(0,0,0,0.1);
+    }
+  }
+
+
+  &.btn-block {
+    display: block;
+    width: 24.5rem;
+    margin: 0 auto;
+
+    &.small {
+      width: 15rem;
+    }
+    &.long {
+      width: 30rem;
+    }
+  }
+
+  &.btn-inline {
+    display: inline-block;
+    padding: 0;
+    margin: 1rem 0;
+    border-width: 0;
+
+    line-height: 1.4;
+    color: $font-middle;
+    
+    @include underlined($font-middle, $font-dark);
+    &:hover {
+      background: transparent;
+      color: $font-dark;
+    }
+  }
+
+  &.thin {
+    line-height: 4.2rem;
+    height: 4.2rem;
+  }
+}
+
+// Box with two buttons as seen on confirm modal
+.boolean-btn-wrap {
+  width: 19rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  
+  .btn {
+    @include size(9rem 3.5rem);
+    line-height: 3rem;
+    min-width: 9rem;
+    max-width: 9rem;
+
+    border-radius: 4px;
+    border-color: #d7d7d7;
+    color: $font-middle;
+    text-transform: none;
+    &:hover {
+      border-color: $brand-main;
+      color: white;
+    }
+  }
+}
+
+// <li> item with display flex layout and hoverable class as seen on many tools subpage
+.flex-list-item,
+%flex-list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  // class for box-shadow effect on hover / disabled when event details
+  &.is-hoverable {
+    border-radius: 2px;
+    @include transition(box-shadow 0.25s $ease-in-out-sine);
+    &:hover {
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+      @include transition(box-shadow 0.25s $ease-in-out-sine);
+      &:after, &:before {content:none;}
+    }
+  }
+}
+
+// Simple arrow style as seen on vendor/guest details page
+%arrow,
+.arrow {
+  position: absolute;
+  z-index: 10;
+
+  @include size(1.2rem 2rem);
+  cursor: pointer;
+  padding: 2rem;
+
+  background:url('../assets/images/icon-slide-arrow.png') no-repeat center center;
+  background-size: 1.2rem 2rem;
+
+  &.left {
+    @include transform(rotate(180deg));
+    margin-top: -.15rem ;
+  }
+  &.right {
+  }
+}
+
+
+// css only tooltip behavior as seen on tools/design page
+.tooltip-wrap {
+  position: relative;
+  .tooltip {
+    position: absolute;
+    top: 120%; left: 50%;
+    @include transform(translateX(-50%));
+
+    display: inline-block;
+    min-width: 11rem;
+    padding: 0.5rem 1rem;
+    background: $dark-blue;
+    @include BoxShadowHelper(1);
+    border-radius: 3px;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.8;
+    
+    opacity: 0;
+    @include transition(all 0.25s $ease-in-sine);
+    
+    &:before {
+      $size: 1rem;
+      content: " ";
+      @include size(0);
+
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid $dark-blue;
+
+      position: absolute;
+      top: - $size;
+      left: 50%;
+      margin-left: - $size;
+    }
+  }
+  &:hover {
+    .tooltip {
+      @include transition(all 0.25s $ease-out-sine);
+      opacity: 1;
+      top:110%;
+    }
+  }
+}
+
+// Circle button layout as seen on tools/design page
+.circle-btn {
+  @include size(4rem);
+  display: block;
+  border-radius: 100%;
+  border: 1px solid rgba(255,255,255,0.5);
+  @include transition(border-color 0.3s $ease-in-out-sine);
+  &:hover {border-color: white;}
+
+  &.cover {
+    background:url('../assets/images/asset-icon-cover-white.png') no-repeat center center;
+    background-size: 1.7rem;
+  }
+  &.share {
+    background:url('../assets/images/asset-icon-share-white.png') no-repeat center center;
+    background-size: 1.7rem 1.25rem;
+  }
+  &.pinterest {
+    background:url('../assets/images/asset-icon-pinterest-white.png') no-repeat center center;
+    background-size: 1.15rem 1.5rem;
+  }
+  &.add {
+    @include size(5rem);
+    margin: 0 auto;
+    border: 1px dashed $font-dark;
+
+    color: $font-dark;
+    font-family: $book;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 4.6rem;
+
+    opacity: .6;
+    @include transition(all 0.3s $ease-in-out-sine);
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// Cover image behavior 
+.cover-img {
+  position: absolute;
+  top: 0; z-index: 1;
+
+  width: 100%;
+  min-height: 100%;
+  object-fit:cover;
+}
+
+// extend this class to add a bottom white border on a page
+.bottom-white-bar,
+%bottom-white-bar {
+  &:after {
+    content: " ";
+    width: 100%;
+    height: 5rem;
+    background: white;
+    position: relative;
+    z-index: 9999;
+    bottom: -5rem;
+    display: block;
+  }
+}
+
+// full width search input with magnifying glass placeholder
+.search-box {
+    width: 100%;
+    height: 7rem;
+
+    .search-trigger {
+    	@include size(100%);
+	    background: url('../assets/images/search-trigger-icon.svg') no-repeat center center;
+	    background-size: 2.2rem;
+    	cursor: pointer;
+    }
+
+    input {
+    	@include size(100%);
+    	text-align: center;
+    	line-height: 7rem;
+    	font-size: 6rem;
+    	color: $brand-main;
+    	text-transform: uppercase;
+    	font-family: $title-font;
+    }
+
+    &.thin {
+      height: 5.5rem;
+      input {
+        line-height: 6rem;
+        font-size: 2.6rem;
+      }
+    }
+    
+    &.with-borders {
+      border-top:1px solid #dadada;
+      border-bottom:1px solid #dadada;
+    }
+}
+
+// Date switcher as seen on calendar sidebar and tasks 
+.date-switcher {
+  @include size(100%);
+  overflow: auto;
+  > div {
+    @include size(100% 5rem);
+    position: relative;
+    a.arrow {
+      @include size(5rem);
+      position: absolute;
+      top: 40%;
+
+      &.arrow-left {
+        left: 0;
+        background: url('../assets/images/asset-arrow-left-grey.png') no-repeat left top;
+        background-size: 0.65rem;
+      }
+      &.arrow-right {
+        right: 0;
+        background: url('../assets/images/asset-arrow-right-grey.png') no-repeat right top;
+        background-size: 0.65rem;
+      }
+    }
+    p {
+      margin: 0;
+      text-align: center;
+      line-height: 5rem;
+      text-transform: uppercase;
+      font-family: $book;
+    }
+  }
+
+}
+
+// progress bar as seen on budget goal and tasks
+/* use like this:
+<div class="progress-bar">
+  <div class="progress" style="width: {{XXX}} % "></div>
+  <div class="bar"></div>
+  <div class="values">
+    [...]
+  </div>
+</div> */
+.progress-bar {
+  width: 100%;
+  height: 0.3rem;
+  position: relative;
+  margin: 3.25rem auto;
+
+  .progress {
+    @include size(0 .3rem);
+    height: 0.3rem;
+    background-color: $brand-main;
+
+    position: absolute;
+    top: 0;left: 0;
+    z-index: 5;
+  }
+  .bar {
+    @include size(100% .3rem);
+    background-color: #f2f2f2;
+
+    position: absolute;
+    top: 0;left: 0;
+    z-index: 4;
+  }
+}
+
+%landing-page,
+.landing-page {
+  min-width: calc(100vw - 10rem );
+  min-height: calc(100vh - 10rem );
+  @include size(100%);
+  position: relative;
+  top: 0; left: 0; right: 0;
+  z-index: 1;
+
+
+  .center-block {
+    width: 100%;
+    @include center(vertical);
+    position: absolute;
+    z-index: 9;
+    display: inline-block;
+
+    text-align: center;
+
+    .light-btn {
+      display: block;
+      max-width: 35rem;
+      width: 35rem;
+      height: 4rem;
+      line-height: 4rem;
+      @include transition(background 0.25s $ease-in-out-sine);
+
+      margin:0 auto 1.5rem;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 4.4rem;
+      color: white; 
+      font-weight: 200;
+      margin-bottom: 7.5rem;
+    }
+    p {
+      width: 100%;
+      max-width: 81rem;
+      display: block;
+      margin: 0 auto;
+
+      color:white;
+      font-size: 1.7rem;
+      font-family: $book;
+      margin-bottom: 7.5rem;
+
+      &:nth-child(3) {
+        margin-bottom: 3rem;
+      }
+    }
+    .btn-inline {
+      margin-top: 10rem;
+
+      color: white;
+      text-transform: none;
+      span::after {
+        background-color: darken(white, 10%);
+      }
+      &:hover {
+        color: white;
+        span::after {
+          background-color: white;
+        }
+      }
+    }
+  }
+
+}

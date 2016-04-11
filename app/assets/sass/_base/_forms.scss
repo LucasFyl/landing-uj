@@ -1,0 +1,771 @@
+/**
+ * Base styles ~ Forms
+ */
+%disabled-state {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+html {
+  input[disabled] {
+    @extend %disabled-state;
+  }
+}
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+textarea {
+  @include appearance(none);
+  resize: vertical;
+  width: 100%;
+}
+input, select {
+  @include appearance(none);
+  border-radius: 0;
+}
+select {
+  display: inline-block;
+  min-width: 6.5rem; padding-right: 1rem;
+  border-bottom: 1px solid $border-color;
+  background: url('../assets/images/asset-icon-select.png') no-repeat right center;
+  background-size: 0.7rem;
+
+  padding-bottom: 0.5rem;
+  margin: 0.5rem auto 0;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $border-active;
+  }
+  &.ng-dirty.ng-valid {
+    border-bottom: 1px solid $border-active;
+  }
+
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+label,
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="url"],
+input[type="number"],
+input[type="password"] {
+  font-family: $book;
+  color: #5d5858;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin: 0;
+}
+input[type="button"],
+button[type="submit"] {
+  @extend .btn;
+}
+form {
+  @include outer-container;
+  overflow: visible;
+  > section {
+    @include size(100%);
+    overflow: auto;
+    padding-top: 1.1rem;
+    label {
+      @include span-columns(12);
+      padding-right: 6rem;
+    }
+  }
+}
+label {
+  position: relative;
+  display: inline-block;
+  overflow: auto;
+}
+button, input[type="submit"] {
+  display: block;
+  clear: both; float: none;
+}
+// used on intake form page : 
+.label-wrap {
+  &.full {
+    @include span-columns(12);
+  }
+  &.half {
+    @include span-columns(6);
+
+    // formly override :
+    .formly-field {
+      padding-right: 5rem;
+    }
+  }
+  &.third {
+    @include span-columns(4);
+  }
+  // formly override :
+  &.contain-2 {
+    .formly {
+      .formly-field {
+        @include span-columns(6);
+        padding-right: 5rem;
+
+        &:nth-child(2) {
+          margin-right: 0;
+          padding-right: 0 ;
+        }
+      }
+    }
+  }
+  &.contain-3 {
+    .formly {
+      .formly-field {
+        @include span-columns(4);
+        padding-left: 5rem;
+        &:nth-child(2) {
+          margin-right: 0;
+          padding-right: 0 ;
+        }
+      }
+    }
+  }
+}
+
+/*
+build it like this:
+
+.editable-input
+  form
+    p // actual data
+      span // used to display label name
+    a // 'change' link
+    label
+      input[text] // actual input to modify data
+    input [submit] // submit data change
+*/
+// .editable-input {
+//   padding-top: 2rem;
+//   padding-bottom: 1.25rem;
+//   form {
+//     > p {
+//       color: $font-middle;
+//       margin: 0;
+
+//       position: relative;
+//       display: inline-block;
+//       width: 70%;
+
+//       padding: 1.5rem 0 1rem;
+//       @extend .border-hover;
+
+//       span {
+//         position: absolute;
+//         right: 0;
+
+//         color: #869b9b;
+//         text-align: right;
+//         text-transform: capitalize;
+//       }
+//     }
+//     label {
+//       margin: 0;
+//       width: 70%;
+//       float: none;
+//     }
+//     > a, > input[type="submit"] {
+//       color: $font-light;
+//       text-align: center;
+//       line-height: 1.4;
+//       margin: 0;
+
+//       display: inline-block;
+//       vertical-align: top;
+//       padding: 1.5rem 0;
+//       width: 30%;
+//       float: right;
+//       cursor: pointer;
+//     }
+//   }
+// }
+// Formly / angular-material-formly / specific styles  :
+md-input-container {
+  width: 100%;
+  margin: 1rem 0 2rem !important;
+  label {
+    padding-bottom: 1rem !important;
+  }
+  input {
+    padding-bottom: 1rem !important;
+  }
+  .md-errors-spacer {
+    min-height: 0px !important;
+  }
+
+  &:not(.md-input-invalid).md-input-focused {
+    // override input border color :
+    .md-input {
+      border-width: 0 0 2px 0;
+      border-color: $border-active !important;
+    }
+  }
+  &.md-input-has-value {
+    label {
+      color: $font-light !important;
+    }
+  }
+  &.md-input-valid {
+    .md-input.ng-invalid.ng-dirty {
+      color: green !important;
+      border-width: 0 0 1px 0 !important;
+      border-color: $border-active !important;
+    }
+    label {
+      color: red;
+    }
+  }
+  &.md-input-focused {
+    // override input name color :
+    label {
+      color: $font-light !important;
+    }
+  }
+}
+// override select and dropdown select style :
+md-select {
+  md-select-value {
+    .md-text {
+      color: $font-dark;
+    }
+  }
+}
+md-select:not([disabled]):focus .md-select-value {
+  border-width: 0 0 0px 0;
+  // border-bottom-color: $border-active !important;
+}
+md-select-menu md-option {
+  .md-text {
+    color: $font-middle !important;
+  }
+}
+md-select-menu md-option[selected] {
+  .md-text {color: $brand-main !important;}
+}
+// Override select zindex value :
+.md-select-menu-container {
+  z-index: 999;
+}
+// Override select icon :
+.md-select-icon {
+  @include size(0.7rem);
+  background: url('../assets/images/asset-icon-select.png') no-repeat right center;
+  background-size: 0.7rem;
+  &:after {
+    content: none !important;
+  }
+}
+// Override checkbox  :
+
+md-checkbox {
+  position: relative;
+  .md-ripple-container {display: none !important;}
+  .md-container {
+    &:before, &:after {content: none;}
+  }
+  .md-icon {
+    @include size(2rem);
+    border-radius: 100%;
+    border-width: 0px;
+    background: #e6e6e6 !important;
+    box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
+  }
+  &.md-checked {
+    .md-icon {
+      position: relative;
+
+      &:after {
+        content: none;
+      }
+      &:before {
+        content: " ";
+        @include size(1rem);
+        position: absolute;
+        top: 0.5rem;left: 0.5rem;
+        border-radius: 100%;
+        background: #818f98;
+        z-index: 99;
+      }
+    }
+  }
+}
+md-checkbox.md-checked .md-ink-ripple,
+ md-checkbox.md-checked .md-ink-ripple {
+  color: $brand-main;
+}
+
+.union-checkbox {
+  
+  md-checkbox {
+    display: block;
+    width: 1.7rem;
+    margin: 0 auto;
+  }
+  .md-icon {
+    @include size(1.7rem);
+    background:transparent !important;
+    border-radius: 2px;
+    border: 2px solid #646464;
+  }
+  md-checkbox.md-checked .md-icon {
+    background:$brand-main !important;
+    &:before {content: none;}
+    &:before {
+      content: " ";
+      @include size(100%);
+      background: url(../assets/images/asset-icon-checkbox.png) no-repeat center center;
+      background-size: 1.5rem 1rem;
+      top: 0; left: 0;
+    }
+  }
+}
+// flexbox layout 
+// .display-flex {
+//   display: flex;
+//   flex-flow: row wrap;
+//   align-content: space-between;
+//   align-items: flex-start;;
+
+
+//   &.contain-2 {
+//     > .flex-1 {
+//       display: block;
+//       width: 50% !important;
+//       padding-left: 3rem;
+
+//       &:first-child {
+//         padding-left: 0;
+//         padding-right: 3rem;
+//       }
+//     }
+//   }
+//   &.contain-3 {
+//     > .flex-1 {
+//       display: block;
+//       width: calc(33% - 2rem) !important;
+//       margin-right: 2rem;
+
+//       &:last-child {
+//         margin-left: 2rem;
+//         margin-right: 0;
+//       }
+//     }
+//   }
+// }
+// ng-form.formly.display-flex.contain-2 {
+//   .flex-1 {
+//     display: block;
+//     width: 50% !important;
+//     padding-left: 3rem;
+
+//     &:first-child {
+//       padding-left: 0;
+//       padding-right: 3rem;
+//     }
+//   }
+// }
+// override formly datepicker
+md-datepicker {
+  background-color: transparent;
+  button.md-datepicker-button {
+    display: none !important;
+  }
+  .md-datepicker-input-container {
+    margin-left: 0;
+    width: 100%;
+      margin-top: 2rem;
+
+    &.md-datepicker-focused {
+      border-bottom-width: 1px;
+      border-bottom-color: $border-active;
+    }
+    input.md-datepicker-input {
+      color: $font-light;
+    }
+    button.md-datepicker-triangle-button {
+      margin-top: 0 !important;
+      width: 2rem !important;
+
+      background: url("../assets/images/asset-icon-select.png") no-repeat right center;
+      background-size: 0.7rem;
+
+      .md-datepicker-expand-triangle {
+        border-color: transparent !important;
+        border-width: 0 !important;
+      }
+    }
+  }
+}
+
+.md-datepicker-calendar-pane {
+  overflow: hidden;
+
+  .md-datepicker-input-mask {
+      display: none;
+  }
+  .md-datepicker-calendar {
+    /* Various overrides so the datepicker gets the right size: */
+    table.md-calendar-day-header {
+      background: white;
+      border-bottom: 1px solid $border-color;
+      th {
+        font-family: $heavy;
+        color: $font-middle;
+        font-size: 0.75rem;
+      }
+    }
+    .md-calendar-scroll-mask {
+      box-shadow: none !important;
+      md-virtual-repeat-container.md-calendar-scroll-container {
+        box-shadow: none !important;
+        
+        .md-virtual-repeat-scroller {
+          table.md-calendar {
+
+            /*  Actual calendar from datepicker :   */
+            tbody.md-calendar-month {
+
+              .md-calendar-month-label {
+
+                color: $brand-main;
+                font-family: $book;
+                font-size: 1.1rem;
+                
+                letter-spacing: 0;
+              }
+
+              td.md-calendar-date {
+                &.md-focus .md-calendar-date-selection-indicator {
+                  background:transparent;
+                }
+                span.md-calendar-date-selection-indicator {
+                  font-family: $heavy;
+                  color: $font-middle;
+                  font-size: 1.1rem;
+                  text-align: center;
+                  @include transition(all 0.25s ease);
+
+                  &:hover {
+                    background-color: transparent;
+                    border: 1px solid $brand-main;
+                    @include transition(all 0.25s ease);
+                  }
+                }
+                &.md-calendar-date-today {
+                  span.md-calendar-date-selection-indicator {
+                    border-color: $brand-main;
+                  }
+                }
+                &.md-calendar-selected-date {
+                  span.md-calendar-date-selection-indicator {
+                    background: $brand-main;
+                    color: white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.md-datepicker-open .md-datepicker-input-container {
+  margin-left: 0;
+  border-bottom: 1px solid $border-color;
+} 
+.md-datepicker-open .md-datepicker-input {
+  margin-left: 0;
+  height: auto;
+}
+// section date container to have 4 small inputs for time selection 
+.time-input-container {
+  width: 100%;
+  overflow: hidden;
+  min-height: 5rem;
+
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  
+  .formly {
+    max-width: 100%;
+    overflow: visible;
+
+    display: flex;
+    flex-flow: row nowrap; 
+    justify-content: flex-start; 
+
+    position: relative;
+    padding-left: 3.5rem;
+    &:before {
+      content: "From: ";
+      position: absolute;
+      left: 0; top: 1.1rem;
+
+      font-family: $book;
+      font-size: 1.1rem;
+      color: $font-middle;
+    }
+  }
+  .formly-field {
+    width: 2.3rem; 
+    // height: 2rem;
+    max-height: 3.2rem !important;
+    
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(5) {
+      md-select .md-select-icon {
+        display: none !important;
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(5) {
+      position: relative;
+      &:after {
+        content: ":";
+        position: absolute;
+        left: -0.5rem; top: 0.8rem
+      }
+    }
+    &:nth-child(3) {
+      margin-right: 2rem;
+    }
+
+    &:nth-child(3),
+    &:nth-child(6) {
+      md-select {
+        &:after {
+          content: none !important;
+        }
+      }
+    }
+
+    md-input-container {
+      margin: 0 !important;
+
+      md-select {
+        position: relative;
+        &:after {
+          content: " ";
+          width: 1.3rem; height: 1px;
+          background: $border-color;
+          position: absolute;
+          bottom: 0; left: 0.3rem;
+        }
+      }
+      md-select-value {
+        border-bottom: none;
+        .md-text {
+          color: $font-light;
+          .md-input-has-value & {
+            color: $font-light;
+          }
+        }
+        .md-select-icon {
+          width: 0.7rem;
+          position: absolute;
+          left: 2.2rem;
+          top: 43%;
+        }
+      }
+    }
+  }
+}
+/*   Color - select  style override   */
+.color-select {
+  @include size(4.5rem 2rem !important);
+  position: absolute;
+  right: 5rem;
+  top: 9rem;
+
+  md-input-container {
+    @include size(4.5rem 2rem);
+    margin: 0 !important;
+    border: none;
+    label {
+      display: none;
+    }
+    md-select {
+      @include size(2.25rem 2rem !important);
+      border: 1px solid $border-color;
+      &:focus {.md-select-value{border-width:0px !important;}}
+      .md-select-value  {
+        padding: 0;
+        height: 2rem;
+        min-height: 2rem;
+        width: 4rem;
+        min-width: 4rem;
+        border: none;
+        &:focus, &:active, &[selected] {border-width:0px !important;}
+
+        span, .md-text {
+          @include size(2rem);
+          position: relative;
+
+          overflow: visible;
+          text-indent: -9999px;
+
+          .color-circle {
+            @include size(1rem);
+            border-radius: 100%;
+            position: absolute;
+            top: 50%; left: 50%;
+            margin-top: 0rem;
+            margin-left: 0.6rem;
+          }
+        }
+        span.md-select-icon {
+          background-position-y: .5rem;
+        }
+        &.md-select-placeholder {
+          padding: 0;
+          text-indent: -9999px;
+          span:not(.md-select-icon) {
+            @include size(1rem);
+            border-radius: 100%;
+            position: absolute;
+            background-color: $cal-red;
+            margin: .2rem 1rem 0 0.5rem;
+          }
+          span.md-select-icon {
+            margin-left: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// targeting only color picker select menu with formly generated id, not linked with .color-picker
+body.tool-calendar .md-select-menu-container#select_container_14,
+body.tool-calendar .md-select-menu-container#select_container_41 {
+  @include size(2.25rem 8.5rem !important);
+  min-height: 8.5rem; max-height: 8.5rem;
+  min-width: 2.25rem !important;
+  overflow: hidden;
+
+  left: 28.5rem !important;
+  top: 14.2rem !important;
+
+  md-select-menu {
+    @include size(2.25rem 8.5rem);
+    min-height: 8.5rem; max-height: 8.5rem;
+    box-shadow: none !important;
+
+    md-content {
+      @include size(2.25rem 8.5rem);
+      min-height: 8.5rem; max-height: 8.5rem;
+      min-width: 2.25rem; max-width: 2.25rem;
+      background-color: #f8f8f8 !important;
+      border: 1px solid $border-color;
+      border-radius: 2px;
+
+      md-option {
+        @include size(2.25rem 2rem);
+        min-height: 2rem; max-height: 2rem;
+        padding: 0; position: relative;
+        text-indent: -9999px;
+
+        .color-circle {
+          content: " ";
+          @include size(1rem);
+          border-radius: 100%;
+          position: absolute;
+          top: 50%; left: 50%;
+          margin-top: -0.5rem;
+          margin-left: -0.5rem;
+        }
+
+        //&:after {
+        //  content: " ";
+        //  @include size(1rem);
+        //  border-radius: 100%;
+        //  position: absolute;
+        //  top: 50%; left: 50%;
+        //  margin-top: -0.5rem;
+        //  margin-left: -0.5rem;
+        //}
+        //&:first-child {
+        //  &:after {
+        //    background-color: $cal-orange;
+        //  }
+        //}
+        //&:nth-child(2) {
+        //  &:after {
+        //    background-color: $cal-blue;
+        //  }
+        //}
+        //&:nth-child(3) {
+        //  &:after {
+        //    background-color: $cal-green;
+        //  }
+        //}
+        //&:nth-child(4) {
+        //  &:after {
+        //    background-color: $cal-red;
+        //  }
+        //}
+      }
+    }
+  }
+}
+// Switch override :
+md-switch {
+  margin-top: 0;
+  margin-bottom: 0;
+  .md-container {
+    @include size (2.4rem 1.9rem !important);
+  }
+  .md-bar {
+    @include size (1.7rem 0.725rem !important);
+    min-width:2.4rem; min-height: 0.725rem;
+    background-color: #b6b5b5;
+  }
+  .md-thumb {
+    @include size(1rem);
+  }
+  &.md-checked {
+    .md-thumb {
+      @include size(1rem);
+      background-color: $brand-main;
+    }
+    .md-bar {
+      @include size (1.7rem 0.725rem !important);
+      background-color: lighten($brand-main, 30%);
+    }
+    .md-ink-ripple {
+      background-color: $brand-main;
+    }
+  }
+}
+// Currency field : 
+.formly-field-currency {
+  label {
+    color: $font-light;
+  }
+}
+// custim file upload : 
+.custom-file-upload {
+  @extend .light-btn;
+  cursor: pointer;
+
+  display: block;
+  max-width: 23rem;
+  margin: 4rem auto;
+  color: $font-middle;
+  &.white {color: white;}
+  @include transition(background 0.5s $ease-in-out-sine);
+  input {
+    display: none;
+  }
+}

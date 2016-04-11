@@ -1,0 +1,79 @@
+h1, .h1, %h1 {
+  font-family: $title-font;
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: 0.5rem;
+  color: $heading-color;
+  margin-bottom: 3.7rem;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+h2, .h2, %h2,
+h3, .h3, %h3,
+h4, .h4, %h4,
+h5, .h5, %h5 {
+  font-family: $title-font;
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+  color: $font-dark;
+
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+h2, .h2, %h2 {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+h4, .h4, %h4,
+h5, .h5, %h5 {
+  font-size: 1.3rem;
+  letter-spacing: .12rem;
+}
+body, p, a, input, button {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-family: $base-font;
+  color: $font-middle;
+  letter-spacing: .05rem;
+}
+a {
+  text-decoration: none;
+  color: $font-dark;
+  &.inline-link {
+    display: inline-block;
+  }
+  &.block-link {
+    display: block;
+  }
+  /* ----------------------- Add a 'span' inside an element to have the underline effect with hover */
+  &.underlined {
+    @include underlined($border-color, $border-active);
+  }
+}
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+p.title {
+  font-size:1.7rem;
+  font-family: $title-font;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  text-align: center;
+}

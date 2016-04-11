@@ -1,0 +1,101 @@
+header#landing-page-header {
+	height: 6.5rem;
+	background: white;
+	position: absolute;
+	z-index: 999;
+	top: 0; left: 0;right: 0;
+	width: 100%;
+
+	h1.logo {
+		@include center(horizontal);
+		margin-bottom: 0;
+		@extend .grey;
+		height: 6.5rem;
+    	background-position-y:center;
+	}
+
+	nav {
+		$grey: #959595;
+		position: absolute;
+		right: 0; top: 0;
+		ul {
+			padding: 0;margin: 0;
+			display: flex;
+			list-style: none;
+			li {
+				width: 13rem;
+				border-left: 1px solid #ccc;
+
+				text-align: center;
+				height: 6.5rem;
+				line-height: 6.5rem;
+
+				a {
+					@include size(100%);
+					display: block;
+
+					font-size: $book;
+					text-decoration: none;
+					color: $grey;
+					letter-spacing: .1rem;
+					line-height: 6.5rem;
+					font-size: 1.5rem;
+					
+					@include transition(background 0.25s $ease-in-out-sine);
+					&:hover {
+						text-decoration: underline;
+						background: darken(white, 2%);
+					}
+				}
+			}
+		}
+	}
+}
+
+#outer-wrap {
+	@include size(100%);
+	position: relative;
+	z-index: 99;
+	padding-top: 6.5rem;
+
+	section {
+		h2.sub {
+			text-transform: uppercase;
+			color: white;
+			font-size: 1.6rem;
+			font-family: $base-font;
+
+			margin-top: 0;
+			margin-bottom: 3.5rem;
+			line-height: 1;
+		}
+		h2.main {
+			text-transform: uppercase;
+			color: white;
+			font-size: 5rem;
+			font-family: $title-font;
+
+			margin-top: 0;
+			margin-bottom: 3.5rem;
+			line-height: 1;
+			letter-spacing: .8rem;
+		}
+		h2.main + p {
+
+		}
+	}
+	section.landing {
+		@extend .landing-page;
+		min-height: calc(100vh - 6.5rem );
+	    background: url(../images/asset-landing.jpg) no-repeat center center;
+	    background-size: cover;
+	    @include overlay(rgba(0,0,0,0.2));
+
+	    .btn {
+	    	margin-top: 6.5rem;
+			min-width: 16.2rem;
+			width: 16.2rem;
+			letter-spacing: .15rem;
+	    }
+	}
+}

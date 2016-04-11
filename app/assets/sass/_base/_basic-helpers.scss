@@ -1,0 +1,243 @@
+@mixin underlined($color, $hover-color) {
+  > span {
+    position: relative;
+    display: inline-block;
+    &:after {
+      content: " ";
+      @include size(100% 1px);
+      position: absolute;
+      left: 0; right: 0;
+      bottom: -0.5rem;
+
+      background-color: $color;
+      @include transition(background-color 0.25s ease);
+    }
+  }
+  &:hover {
+    > span::after {
+      background-color: $hover-color;
+      @include transition(background-color 0.25s ease);
+    }
+  }
+}
+@mixin center($value) {
+  @if $value == 'vertical' {
+    position: relative; top: 50%;
+    @include transform(translateY(-50%));
+  }
+  @else if $value == 'horizontal' {
+    position: relative; left: 50%;
+    @include transform(translateX(-50%));
+  }
+}
+@mixin BoxShadowHelper($level){
+    @if $level == 1 {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    @else if $level == 2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    @else if $level == 3 {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    @else if $level == 4 {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    @else if $level == 5 {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+}
+@mixin levitable($fromIndex, $toIndex) {
+  @include BoxShadowHelper($fromIndex);
+  @include transition(all 0.25s $ease-out-sine);
+  &:hover {
+    @include transform(translateY(-.2rem));
+    @include BoxShadowHelper($toIndex);
+    @include transition(all 0.4s $ease-out-sine);
+  }
+}
+@mixin overlay($color) {
+    &:before {
+      content: " ";
+      @include size(100%);
+      position: absolute;
+      top: 0;left: 0;right: 0;bottom: 0;
+      z-index: 2;
+      background:$color;
+      @include transition(all 0.25s $ease-out-sine);
+    }
+}
+.pressable,
+%pressable {
+  &:active {
+    @include transform(translateY(0));
+    @include BoxShadowHelper(1);
+  }
+}
+/********   General Stuff */
+
+
+.logo {
+  margin-top: 0 !important;
+  @include size(17rem 5rem);
+  background: url('../images/logo.svg') no-repeat center center;
+  background-position-y:  1.6rem;
+  background-size: 17rem  2rem;
+  display: inline-block;
+  text-indent: -9999px;
+
+  &.black {
+    background: url('../images/logo-black.svg') no-repeat;
+    background-size: 17rem  2rem;
+    background-position-y:  1.6rem;
+  }
+  &.grey {
+    background: url('../images/logo-grey.svg') no-repeat;
+    background-size: 17rem  2rem;
+    background-position-y: 1.6rem;
+  }
+}
+
+
+/* -----------------------  "see details" type cta = growing on hover after el */
+.hoverGrow {
+  @include transition(all 0.25s ease);
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: " ";
+    @include size(100% 1px);
+    @include transition(all 0.25s ease);
+    background-color: $font-dark;
+    position: absolute;
+    left: 0; bottom: -0.5rem;
+
+    width: 0;
+  }
+  &:hover {
+    @include transition(all 0.25s ease);
+    color: $font-dark;
+    &:after {
+      @include transition(all 0.25s ease);
+      width: 100%;
+    }
+  }
+}
+
+/* -----------------------  Simple underline with darker line on hover  */
+.hoverable {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: " ";
+    @include size(100% 1px);
+    position: absolute;
+    left: 0; bottom: -0.5rem;
+    background: $border-color;
+    @include transition(background 0.25s $ease-out-sine);
+  }
+  &:hover {
+    &:before {
+      @include transition(background 0.25s $ease-in-sine);
+      background: $border-active;
+    }
+  }
+}
+
+/* Misc ---------------------- */
+
+.isMobile {
+  display: none;
+  visibility: hidden;
+
+  @include media($isMobile) {
+    visibility: visible;
+    display: block;
+  }
+}
+
+.no-bullet,
+%no-bullet {
+  list-style: none;
+}
+
+.outer-container,
+%outer-container {
+  @include size(100%);
+}
+
+ul {
+  &.no-bullet {
+    @extend %no-bullet;
+  }
+}
+
+
+.hide,
+%hide {
+  display: none;
+}
+
+.fill-remainder,
+%fill-remainder {
+  float: none;
+  overflow: hidden;
+}
+
+.vertical-center,
+%vertical-center {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+.clearfix,
+%clearfix {
+  @include clearfix;
+}
+
+.hide-mobile,
+%hide-mobile {
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.hide-desktop,
+%hide-desktop {
+  @include media($desktop) {
+    display: none;
+  }
+}
+
+
+.placeholder-white,
+%placeholder-white {
+  &::-webkit-input-placeholder {
+     color: white;
+     opacity: 1;
+  }
+  &:-moz-placeholder {
+     color: white;  
+     opacity: 1;
+  }
+  &::-moz-placeholder {  
+     color: white;  
+     opacity: 1;
+  }
+  &:-ms-input-placeholder {  
+     color: white;  
+     opacity: 1;
+  }
+}
+.center-block,
+%center-block {
+  &.vertical {
+    @include center(vertical);
+  }
+  &.horizontal {
+    @include center(horizontal);
+  }
+}

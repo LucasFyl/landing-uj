@@ -1,0 +1,73 @@
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+@include selection {
+  background: #000;
+  text-shadow: none;
+  color: $light-bg;
+}
+/**
+ * Base styles
+ */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+a, button, input, div {
+  outline: none;
+}
+hr {
+  margin: 6rem auto;
+  height: 0;
+  border: solid $border-color;
+  border-width: 1px 0 0;
+  clear: both;
+}
+
+#content {
+  @include size(100%);
+  max-width: 100vw;
+  min-height: 100vh;
+
+  position: relative;
+  z-index: 9;
+
+  padding: 5rem;
+  padding-bottom: 0;
+  box-sizing: border-box;
+
+  background-color: $light-bg;
+  overflow: auto;
+}
+.block-container {
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+
+  &.full {
+    width: 90%;
+  }
+  &.mid {
+    width: 60%;
+  }
+  &.tiny {
+    width: 25%;
+  }
+
+  &.small {
+    width: 36rem;
+  }
+}

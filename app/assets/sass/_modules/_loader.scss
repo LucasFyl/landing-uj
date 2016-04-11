@@ -1,0 +1,28 @@
+
+#loader {
+	@include size(100%);
+	position: fixed;
+	background-color: white;
+	z-index: 9999;
+	.vertical-center {
+		width: 100%;
+		@include transform(translateY(0));
+		margin-top: -4rem;
+	}
+	.logo {
+		background: url(../images/logo-black.svg) no-repeat top left;
+		background-size: 21rem;
+		display: inline-block;
+		vertical-align:top;
+		width: 21rem;
+		height: 3rem;
+		margin: 0 auto;
+		opacity: 0;
+	}
+	.center {
+		position: relative;
+		display: inline-block;
+		left:50%;
+		@include transform(translateX(-50%));
+	}
+}

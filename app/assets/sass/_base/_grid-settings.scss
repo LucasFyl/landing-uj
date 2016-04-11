@@ -1,0 +1,22 @@
+@import "../../bower_components/neat/app/assets/stylesheets/_neat-helpers";
+
+/**
+ * Base styles ~ Grid options
+ */
+$gutter: 0.3em;
+$border-box-sizing: true;
+$grid-columns: 12 !default;
+$max-width: none;
+// $max-width: 110rem;
+$visual-grid: false;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1;
+/**
+ * Base styles ~ Media Query options
+ */
+$isMobile: new-breakpoint(max-width 1000px);
+$mobile: new-breakpoint(max-width 480px);
+$desktop: new-breakpoint(min-width 480px);
+$medium: new-breakpoint(min-width 480px max-width 1200px);
+$large: new-breakpoint(min-width 1200px);

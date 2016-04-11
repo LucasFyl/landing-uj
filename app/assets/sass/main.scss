@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+/* Main Project imports ***********************/
+
+/*  Various project settings
+    that need to be set globally    ***********************/
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+@import "_base/grid-settings";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat";
+// @import "core/dependencies/ngImgCrop/ngImgCrop";
+
+/* Own mixins ***********************/
+@import "_addons/_rem";
+@import "_addons/_form-reset-helpers";
+
+/* Base ***********************/
+@import "_base/_normalize";
+@import "_base/_fontface";
+@import "_base/_easings";
+@import "_base/_grid";
+@import "_base/_variables";
+@import "_base/_basic-helpers";
+@import "_base/_components";
+@import "_base/_type";
+@import "_base/_forms";
+@import "_base/_general";
+@import "_base/_ui-view-container";
+
+/* Reusable Component (header/footer/dropdowns etc) *********************/
+@import "_modules/header";
+@import "_modules/popins";
+@import "_modules/tools-menu";
+@import "_modules/loader";
+
+/* Module styles (individual page styles) ***********************/
+
+@import "_pages/landing-page";

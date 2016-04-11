@@ -1,0 +1,52 @@
+header {
+  overflow: hidden;
+  > .left, > .top, > .right {
+    background-color: white;
+    position: fixed;
+    z-index: 9999;
+  }
+  > .left, > .right {
+    @include size(5rem 100vh);
+    top:0;
+  }
+  > .left {
+    left:0;
+    .menu-trigger {
+      @include size(5rem);
+      background: url('../assets/images/menu-trigger-icon.svg') no-repeat center center;
+      background-size: 1.8rem;
+
+      @include center(vertical);
+      cursor: pointer; outline:none;
+      z-index: 99;
+      &.close {
+        background: url('../assets/images/menu-close-icon.svg') no-repeat center center;
+        background-size: 1.5rem;
+      }
+    }
+  }
+  > .right {
+    right:0;
+    .user-trigger {
+      @include size(5rem);
+      background: url("../assets/images/user-trigger-icon.svg") no-repeat center center,
+                  url("../assets/images/asset-icon-checkmark.svg") no-repeat 70% 60%;
+      background-size: 1.2rem, 1rem;
+
+      @include center(vertical);
+      cursor: pointer; outline:none;
+      z-index: 99;
+    }
+  }
+  > .top {
+    @include size(100% 5rem);
+    top: 0; left: 0; right: 0;
+
+    .logo {
+      display: block;
+      margin: 1.9rem auto;
+      @include clearfix;
+
+    }
+  }
+}

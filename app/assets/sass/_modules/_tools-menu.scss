@@ -1,0 +1,252 @@
+#tools-menu {
+  width: calc(100% - 10rem);
+  height: 5rem;
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+
+  background: white;
+  margin-left: 5rem;
+  margin-right: 5rem;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    width: 55%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+      position: relative;
+      display: inline-block;
+      height: 5rem;
+      line-height: 5rem;
+      padding: 0 2rem;
+
+      min-width: 10rem;
+      overflow: hidden;
+      @include transition(all 0s);
+      @include transition-delay(0.5s);
+
+
+      a {
+        position: relative;
+        text-align: center;
+        display: block;
+        height: 5rem;
+        line-height: 5rem;
+
+        .page-title {
+          display: block;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          line-height: 5.4rem;
+
+          @include transform(translateY(5rem));
+          @include transition(all 0.25s $ease-in-back);
+        }
+      }
+
+
+      //  on li :hover, make overflow visible, hide icon, make appear a > span, make apprear
+      &:hover {
+        overflow: visible;
+        @include transition-delay(0s);
+        a {
+          .page-title {
+            @include transform(translateY(0));
+            @include transition(all 0.25s $ease-out-back);
+            @include transition-delay(0.25s);
+          }
+        }
+        .icon {
+          opacity: 0;
+          @include transition(opacity 0.1s ease);
+          @include transition-delay(0s);
+        }
+        .circle {
+          opacity: 1;
+          top: -4.5rem;
+          @include transition-delay(0.25s);
+        }
+      }
+      // Blue circled el + white icon
+      .circle {
+        @include size(5.5rem);
+        display: block;
+        border-radius: 100%;
+
+        position: absolute;
+        left: 50%; top: -5.5rem;
+        margin-left: -2.75rem;
+
+        opacity: 0;
+        @include levitable(1, 3);
+        @include transition(opacity .1s linear);
+        @include transition-delay(0);
+
+        &:hover {
+          @include transition-delay(0);
+        }
+        &:active {
+          @include transform(translateY(0));
+          @include BoxShadowHelper(1);
+        }
+      }
+      // Grey icon before hover
+      .icon {
+        @include size(2rem);
+
+        display: block;
+        position: absolute;
+        left: 0; right: 0;
+        bottom: 0; top: 0;
+        margin: auto;
+
+        @include transition(opacity 0.5s ease);
+        @include transition-delay(0.25s);
+      }
+      
+      &.active a {
+        box-shadow: inset 0px -2px 0px 0px #587982;
+        box-sizing: content-box;
+      }
+
+
+      // specific backgrounds :
+      &.budget {
+        .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-budget.png') no-repeat center center;
+          background-size: 0.9rem 1.7rem;
+        }
+        .circle {
+          background: $brand-main url('../assets/images/tools-icons/asset-icon-nav-budget-white.png') no-repeat center center;
+          background-size: 0.9rem 1.7rem;
+        }
+        &.active .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-budget-active.png') no-repeat center center;
+          background-size: 0.9rem 1.7rem;
+        }
+      }
+      &.calendar {
+        .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-calendar.png') no-repeat center center;
+          background-size: 1.9rem 1.7rem;
+        }
+        .circle {
+          background: $brand-main url('../assets/images/tools-icons/asset-icon-nav-calendar-white.png') no-repeat center center;
+          background-size: 1.9rem 1.7rem;
+        }
+        &.active .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-calendar-active.png') no-repeat center center;
+          background-size: 1.9rem 1.7rem;
+        }
+      }
+      &.design {
+        .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-design.png') no-repeat center center;
+          background-size: 1.85rem;
+        }
+        .circle {
+          background: $brand-main url('../assets/images/tools-icons/asset-icon-nav-design-white.png') no-repeat center center;
+          background-size: 1.85rem;
+        }
+        &.active .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-design-active.png') no-repeat center center;
+          background-size: 1.85rem;
+        }
+      }
+      &.documents {
+        .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-documents.png') no-repeat center center;
+          background-size: 1.85rem 1.3rem;
+        }
+        .circle {
+          background: $brand-main url('../assets/images/tools-icons/asset-icon-nav-documents-white.png') no-repeat center center;
+          background-size: 1.85rem 1.3rem;
+        }
+        &.active .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-documents-active.png') no-repeat center center;
+          background-size: 1.85rem 1.3rem;
+        }
+      }
+      &.guests {
+        .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-guests.png') no-repeat center center;
+          background-size: 1.6rem 1.7rem;
+        }
+        .circle {
+          background: $brand-main url('../assets/images/tools-icons/asset-icon-nav-guests-white.png') no-repeat center center;
+          background-size: 1.6rem 1.7rem;
+        }
+        &.active .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-guests-active.png') no-repeat center center;
+          background-size: 1.6rem 1.7rem;
+        }
+      }
+      &.vendor {
+        .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-vendors.png') no-repeat center center;
+          background-size: 1.8rem 1.5rem;
+        }
+        .circle {
+          background: $brand-main url('../assets/images/tools-icons/asset-icon-nav-vendors-white.png') no-repeat center center;
+          background-size: 1.8rem 1.5rem;
+        }
+        &.active .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-vendors-active.png') no-repeat center center;
+          background-size: 1.8rem 1.5rem;
+        }
+      }
+      &.itinerary {
+        .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-timeline.png') no-repeat center center;
+          background-size: 1.5rem 1.75rem;
+        }
+        .circle {
+          background: $brand-main url('../assets/images/tools-icons/asset-icon-nav-timeline-white.png') no-repeat center center;
+          background-size: 1.5rem 1.75rem;
+        }
+        &.active .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-timeline-active.png') no-repeat center center;
+          background-size: 1.5rem 1.75rem;
+        }
+      }
+      &.tasks {
+        .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-tasks.png') no-repeat center center;
+          background-size: 1.75rem 1.6rem;
+        }
+        .circle {
+          background: $brand-main url('../assets/images/tools-icons/asset-icon-nav-tasks-white.png') no-repeat center center;
+          background-size: 1.75rem 1.6rem;
+        }
+        &.active .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-tasks-active.png') no-repeat center center;
+          background-size: 1.75rem 1.6rem;
+        }
+      }
+      &.wwebsite {
+        .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-wwebsite.png') no-repeat center center;
+          background-size: 1.3rem 1.2rem;
+        }
+        .circle {
+          background: $brand-main url('../assets/images/tools-icons/asset-icon-nav-wwebsite-white.png') no-repeat center center;
+          background-size: 1.3rem 1.2rem;
+        }
+        &.active .icon {
+          background: url('../assets/images/tools-icons/asset-icon-nav-wwebsite-active.png') no-repeat center center;
+          background-size: 1.3rem 1.2rem;
+        }
+      }
+
+    }
+  }
+}
