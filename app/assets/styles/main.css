@@ -2852,10 +2852,17 @@ md-dialog#document-storage-modal .light-btn, md-dialog#document-storage-modal .c
 }
 
 /* Module styles (individual page styles) ***********************/
+body .btn.small, body input.small[type="button"],
+body button.small[type="submit"], body .md-dialog-container md-dialog button.small:not([aria-label="Close"]), .md-dialog-container md-dialog body button.small:not([aria-label="Close"]) {
+  margin-top: 4.5rem;
+  min-width: 17.2rem;
+  width: 17.2rem;
+}
+
 header#landing-page-header {
   height: 6.5rem;
   background: white;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
@@ -2931,6 +2938,10 @@ header#landing-page-header nav ul li a:hover {
   line-height: 1;
   letter-spacing: .8rem;
 }
+#outer-wrap section h2.main + p,
+#outer-wrap section hr + p {
+  line-height: 1.8;
+}
 #outer-wrap section hr {
   max-width: 10rem;
 }
@@ -2952,6 +2963,19 @@ header#landing-page-header nav ul li a:hover {
   background: url(../images/asset-bg-2.jpg) no-repeat center center;
   background-size: cover;
 }
+#outer-wrap section:nth-child(6):before {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
 #outer-wrap section.price {
   background: #9cafae;
 }
@@ -2969,8 +2993,11 @@ header#landing-page-header nav ul li a:hover {
   right: 0;
   bottom: 0;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.2);
   transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#outer-wrap section:nth-child(8) p {
+  max-width: 85rem;
 }
 #outer-wrap section.landing {
   min-height: calc(100vh - 6.5rem );
@@ -3009,6 +3036,9 @@ header#landing-page-header nav ul li a:hover {
   margin: auto;
   z-index: -1;
 }
+#outer-wrap section.price .tilt, #outer-wrap section.price .tilt > div {
+  transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
 #outer-wrap section.price .tilt > div {
   background-size: 25%;
 }
@@ -3021,10 +3051,4 @@ header#landing-page-header nav ul li a:hover {
 #outer-wrap section.price p.big {
   font-family: 'FuturaStdMedium', sans-serif;
   font-size: 7.5rem;
-}
-#outer-wrap section.price .btn, #outer-wrap section.price input[type="button"],
-#outer-wrap section.price button[type="submit"], #outer-wrap section.price .md-dialog-container md-dialog button:not([aria-label="Close"]), .md-dialog-container md-dialog #outer-wrap section.price button:not([aria-label="Close"]) {
-  margin-top: 4.5rem;
-  min-width: 17.2rem;
-  width: 17.2rem;
 }

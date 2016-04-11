@@ -1,10 +1,15 @@
 body {
 	$base-font: $book;
+	.btn.small {
+		margin-top: 4.5rem;
+		min-width: 17.2rem;
+		width: 17.2rem;
+	}
 }
 header#landing-page-header {
 	height: 6.5rem;
 	background: white;
-	position: absolute;
+	position: fixed;
 	z-index: 999;
 	top: 0; left: 0;right: 0;
 	width: 100%;
@@ -83,8 +88,9 @@ header#landing-page-header {
 			line-height: 1;
 			letter-spacing: .8rem;
 		}
-		h2.main + p {
-
+		h2.main + p,
+		hr + p {
+			line-height: 1.8;
 		}
 		hr {
 			max-width: 10rem;
@@ -111,6 +117,7 @@ header#landing-page-header {
 		}
 		&:nth-child(6) {
 			background: url(../images/asset-bg-2.jpg) no-repeat center center;
+	    	@include overlay(rgba(0,0,0,0.3));
 			background-size: cover;
 		}
 		&.price {
@@ -119,7 +126,8 @@ header#landing-page-header {
 		&:nth-child(8) {
 			background: url(../images/asset-bg-3.jpg) no-repeat center center;
 			background-size: cover;
-	    	@include overlay(rgba(0,0,0,0.25));
+	    	@include overlay(rgba(0,0,0,0.2));
+	    	p {max-width: 85rem;}
 		}
 		
 	}
@@ -157,6 +165,9 @@ header#landing-page-header {
 			// 	-moz-transition-duration: 1s;
 			// }
 		}
+		.tilt, .tilt > div {
+			@include transition(all 0.5s $ease-out-sine);
+		}
 		.tilt > div {
 			background-size: 25%;
 		}
@@ -172,9 +183,6 @@ header#landing-page-header {
 			}
 		}
 		.btn {
-			margin-top: 4.5rem;
-			min-width: 17.2rem;
-			width: 17.2rem;
 		}
 	}
 }
