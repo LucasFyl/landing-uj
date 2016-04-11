@@ -83,6 +83,31 @@ header#landing-page-header {
 		h2.main + p {
 
 		}
+
+		@extend .landing-page;
+		&:nth-child(2) {
+			background: #aeaead;
+		}
+		// TO DO TOOLS
+		&:nth-child(4) {
+			background: url(../images/asset-bg-1.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		&:nth-child(5) {
+			background: #d2c4ba;
+		}
+		&:nth-child(6) {
+			background: url(../images/asset-bg-2.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		&.price {
+			background: #9cafae;
+		}
+		&:nth-child(8) {
+			background: url(../images/asset-bg-3.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		
 	}
 	section.landing {
 		@extend .landing-page;
