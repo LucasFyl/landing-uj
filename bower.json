@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "Quentin Vasseur",
   "homepage": "https://github.com/LucasFyl/quentinvasseur",
   "authors": [
@@ -26,5 +27,18 @@
     "scrollmagic": "~2.0.5",
     "bourbon": "~4.2.6",
     "neat": "~1.7.2"
+=======
+  "name": "union-landing",
+  "private": true,
+  "dependencies": {
+    "bourbon": "~4.2.2",
+    "neat": "~1.7.2",
+    "jquery": "~1.11.1"
+  },
+  "devDependencies": {
+    "gsap": "~1.18.0",
+    "retina.js": "retinajs#~1.3.0",
+    "scrollmagic": "~2.0.5"
+>>>>>>> 1007dccf8aa06c7fa9a790e3ce0ae9c89ea3e9ba
   }
 }

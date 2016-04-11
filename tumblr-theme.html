@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width" />
+
+        <meta name="description" content="Union Jane - Blog">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Facebook Open Graph meta -->
+        <meta property="og:title" content="Union Jane - Blog">
+        <meta property="og:description" content="Welcome to Union Jane a personal platform to plan your wedding with ease and intention.">
+
+        <title>{Title}</title>
+        
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+
+        <style>
+        @font-face {
+            font-family: 'GothamLight';
+            src: url('http://static.tumblr.com/d5finfv/K7Jnw8ab2/gothamlight.eot');
+            src: url('http://static.tumblr.com/d5finfv/K7Jnw8ab2/gothamlight.eot') format('embedded-opentype'),
+                 url('http://static.tumblr.com/d5finfv/K7Jnw8ab2/gothamlight.woff2') format('woff2'),
+                 url('http://static.tumblr.com/d5finfv/K7Jnw8ab2/gothamlight.woff') format('woff'),
+                 url('http://static.tumblr.com/d5finfv/K7Jnw8ab2/gothamlight.ttf') format('truetype'),
+        }
+        body, html {
+            width: 100%;
+            height:100%;
+            overflow: auto;
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        p {font-family: 'GothamLight', helvetica, sans-serif;}
+            header {
+                width: 100%;
+                height: 170px;
+                background-color:#1c1d1f;
+                box-sizing: border-box;
+                padding-top: 80px;
+            }
+            header .wrap,
+            footer .wrap {
+                width: 77.2%;
+                margin: 0 auto;
+            }
+            header a.logo {
+                display: block;
+                width: 160px; height: 24px;
+                float: left;
+
+                text-indent: -9999px;
+                background: url('http://lucasfayolle.com/unionjane/images/logo.svg') no-repeat;
+                background-position: top left;
+                background-size: 213px;
+            }
+            header nav {
+                display: block;
+                float: right;
+            }
+            header nav ul {
+                list-style-type: none;
+                padding: 0;margin: 0;
+                display: inline-block;
+                vertical-align: top;
+            }
+                header ul li {
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 16px;
+                    color: white;
+
+                    margin-right:20px;
+
+                }
+                header ul li:last-child {
+                    margin-right:0;
+                }
+                header ul li a {
+                    font-size: 16px;
+                    color: white;
+                    text-decoration: none;
+                }
+                header ul li a:hover {
+                    text-decoration: underline;
+                }
+                header .social {
+                    display: inline-block;
+                    float: right;
+                }
+                header .social li {
+                    display: inline-block;
+                    margin-right: 15px;
+                    height: 100%;
+                }
+                header .social li:last-child {
+                    margin-right: 0;
+                }
+
+                    header .social li a {
+                        display: block;
+                        width:100%;
+                        height:100%;
+                        /*text-indent: -9999px;*/
+                        color: white;
+                    }
+                        header .social li a img {
+                            display: block;
+                            width: 100%;
+                        }
+            
+            .outer-container {
+                width: 77.2%;
+                margin: 0 auto;
+            }
+                ol#posts {
+                    width: 600px;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+                li.post {
+                    width: 600px;
+                    display: block;
+                    padding-bottom: 70px;
+                    border-bottom: 1px solid rgba(0,0,0,0.2);
+                    margin-bottom: 70px;
+                }
+                li.post:first-child {
+                    margin-top: 50px;
+                }
+                .post h3 {
+                    font-size: 16px;
+                    color: #293443;
+                    margin-bottom: 20px;
+                }
+                    .post h3 a {
+                        text-decoration: none;
+                        color: #293443;
+                    }
+                .post figure {
+                    width: 100%;
+                    left: 5rem;
+                    margin: 0;
+                }
+                    .post figure img {
+                        display:inline-block;
+                        width: 100%;
+                    }
+                .post p {
+                    font-size:14px;
+                    line-height:25px;
+                    color: #aaaaaa;
+                    margin-top: 35px;
+                    margin-bottom: 45px;
+                }
+
+
+            footer {
+                width: 100%;
+                height: 100px;
+                background: #f6f6f6;
+            }
+            footer .copyright {
+                display: inline-block;
+                vertical-align:middle;
+                margin: 0;float: left;
+
+                font-family: $alt-font;
+                font-size: 14px;
+                line-height: 100px;
+                text-transform: uppercase;
+                color:#8d9ead;
+            }
+            footer ul.social {
+                margin: 0;padding: 0;
+                list-style-type:none;
+
+                float: right;
+                height: 100px;
+            }
+                footer .social li {
+                    display: inline-block;
+                    margin-right: 20px;
+                    height: 100%;
+                    padding-top: 40px;
+                    box-sizing: border-box;
+                }
+                footer .social li:last-child {
+                    margin-right: 0;
+                }
+                    footer .social li a {
+                        width:100%;
+                        height:100%;
+                        color: #8d9ead;
+                    }
+                        footer .social li a img {
+                            display: block;
+                            width: 100%;
+                        }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <div class="wrap">
+                <!-- <a href="http://unionjane.co" class="logo"><h1>{Title}</h1></a> -->
+                <a href="../" class="logo"><h1>{Title}</h1></a>
+
+                <nav>
+                    <ul>
+                        <li><a href="../">Blog</a></li>
+                        <li><a href="/archive">Archive</a></li>
+                        <li>
+                            <ul class="social">
+                                <li><a href="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="pinterest"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="instagram"><i class="fa fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="outer-container">
+            <ol id="posts">
+                {block:Posts}
+                    {block:Text}
+                        <li class="post text">
+                            {block:Title}
+                                <h3><a href="{Permalink}">{Title}</a></h3>
+                            {/block:Title}
+                            {Body}
+                        </li>
+                    {/block:Text}
+                    {block:Photo}
+                        <li class="post photo">
+                            <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                            {block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </li>
+                    {/block:Photo}
+                    {block:Panorama}
+                        <li class="post panorama">
+                            {LinkOpenTag}
+                                <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                            {LinkCloseTag}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </li>
+                    {/block:Panorama}
+                    {block:Photoset}
+                        <li class="post photoset">
+                            {Photoset-500}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </li>
+                    {/block:Photoset}
+                    {block:Quote}
+                        <li class="post quote">
+                            "{Quote}"
+
+                            {block:Source}
+                                <div class="source">{Source}</div>
+                            {/block:Source}
+                        </li>
+                    {/block:Quote}
+                    {block:Link}
+                        <li class="post link">
+                            <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                            {block:Description}
+                                <div class="description">{Description}</div>
+                            {/block:Description}
+                        </li>
+                    {/block:Link}{block:Chat}
+                        <li class="post chat">
+                            {block:Title}
+                                <h3><a href="{Permalink}">{Title}</a></h3>
+                            {/block:Title}
+
+                            <ul class="chat">
+                                {block:Lines}
+                                    <li class="{Alt} user_{UserNumber}">
+                                        {block:Label}
+                                            <span class="label">{Label}</span>
+                                        {/block:Label}{Line}
+                                    </li>
+                                {/block:Lines}
+                            </ul>
+                        </li>
+                    {/block:Chat}
+                    {block:Video}
+                        <li class="post video">
+                            {Video-500}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </li>
+                    {/block:Video}
+                    {block:Audio}
+                        <li class="post audio">
+                            {AudioEmbed}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </li>
+                    {/block:Audio}
+                {/block:Posts}
+            </ol>
+        </div>
+
+            
+        <div class="block-footer">
+            {block:PreviousPage}
+                <a href="{PreviousPage}">&#171; Previous</a>
+            {/block:PreviousPage}{block:NextPage}
+                <a href="{NextPage}">Next &#187;</a>
+            {/block:NextPage}
+
+        </div>
+        
+        <footer>
+            <div class="wrap">
+                <p class="copyright">© Union jane 2015</p>
+                <ul class="social">
+                    <li><a href="facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="pinterest"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="instagram"><i class="fa fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+            
+            
+        
+    </body>
+</html>

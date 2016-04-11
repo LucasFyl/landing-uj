@@ -1,0 +1,148 @@
+.popup-box {
+	@include size(100vw 100vh);
+	position: fixed; z-index: 998;
+	background: rgba(0,0,0,0.5);
+
+	display:none;
+}
+.popup.success-box {
+	.registered {
+		margin-top: 10rem;
+	}
+	> p {
+
+		@include media($desktop){
+		    margin: 0rem 0 5rem;
+		}
+	}
+}
+.popup {
+	@include size(80rem 60rem);
+
+	background-color: white;
+	position: absolute; 
+	z-index: 999;
+	left: 50%; 
+	margin-left: -40rem;
+
+	padding: 9rem;
+	top: 50%;
+	@include transform(translateY(-50%));
+	
+	@include media($mobile) {
+		@include size(100%);
+		left: 0; margin-left: 0;
+		padding: 6rem;
+	}
+	
+	.close-popup {
+		font-size: 1rem;
+		color: #adadad;
+		text-decoration: underline;
+		text-align:center;
+		display: block;
+		width: 100%;
+		clear:both;
+		margin-top: 5rem;
+	}
+	.logo {
+		background: url(../images/logo-black.svg) no-repeat;
+		background-position: 0 3px;
+		background-size: 28rem;
+		
+		display: block;
+		margin: 0 auto;
+		width: 21rem;
+		height: 3.5rem;
+	}
+	.small-hr {
+		margin: 3.5rem auto;
+		display: block;
+		width: 5rem;
+		height:1px;
+		background-color: rgba(0,0,0,0.1);
+	}
+	.registered {
+		// color: #293443;
+		color: $brand-blue;
+		font-family: $alt-light;
+		text-align:center;
+		font-size: 2rem;
+		span {
+			// color: #293443;
+			color: $brand-blue;
+			font-family: $alt-medium;
+			display: block;
+			font-size: 5.1rem;
+		}
+	}
+	> p {
+		margin: 2rem 0;
+		span {
+			text-transform: uppercase;
+			font-family: $alt-medium;
+		}
+		@include media($desktop){
+		    margin: 5rem 0;
+    		padding: 0 15rem;
+		}
+		font-family: $alt-font;
+		font-size: 1.4rem;
+		text-align: center;
+		color: #293443;
+		opacity: .5;
+	}
+	section.register {
+		@include media($desktop) {
+			width: 70%;
+		}
+		margin: 0 auto;
+		overflow: auto;
+
+		input[type="text"],
+		input[type="email"] {
+			float:left;
+			margin-bottom: 1rem;
+			
+			box-sizing: border-box;
+			border: 1px solid #ededed;
+			border-radius: 4px;
+			height: 4rem;
+			line-height: 4rem;
+			padding: .5rem 1rem;
+
+			font-family: $alt-font;
+			font-size: 1.4rem;
+			color: #3b3b3b;
+
+			@include media($desktop) {
+				width: 49%;
+				&:first-child {
+					margin-right: 0.9%;
+				}
+				&:last-child {
+					margin-left: 0.9%;
+				}
+			}
+			@include media($mobile) {
+				width: 100%;
+				float:none;
+			}
+				
+		}
+		input[type="submit"] {
+			border:none;
+			border-radius: 4px;
+			height: 4rem;
+			line-height: 4rem;
+			letter-spacing: .1rem;
+			// @include linear-gradient(#55a2d3, #3c8ec3);
+			background-color: $brand-blue;
+
+			text-align: center;
+			color: white;
+			font-size:1.2rem;
+			font-family: $alt-medium;
+		}
+	}
+}
