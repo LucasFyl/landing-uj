@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="103" height="103" viewBox="0 0 103 103">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        filter: url(#gradient-overlay-1);
+        fill-rule: evenodd;
+      }
+    </style>
+
+    <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+      <feImage x="0" y="0" width="103" height="103" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAzIiBoZWlnaHQ9IjEwMyI+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUxLjUiIHkxPSIxMDMiIHgyPSI1MS41Ij4KICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM4YzlkYWQiLz4KICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNiNGJmY2EiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIvPjwvc3ZnPg=="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+  </defs>
+  <path d="M51.500,103.000 C23.058,103.000 -0.000,79.943 -0.000,51.501 C-0.000,23.059 23.058,0.001 51.500,0.001 C79.942,0.001 103.000,23.059 103.000,51.501 C103.000,79.943 79.942,103.000 51.500,103.000 ZM51.500,3.218 C24.835,3.218 3.218,24.836 3.218,51.501 C3.218,78.166 24.835,99.784 51.500,99.784 C78.164,99.784 99.781,78.166 99.781,51.501 C99.781,24.836 78.164,3.218 51.500,3.218 ZM67.594,69.204 L35.406,69.204 C33.629,69.204 32.187,67.763 32.187,65.985 L25.750,48.282 C25.750,46.504 27.191,45.063 28.969,45.063 L28.969,37.017 C28.969,35.239 30.410,33.798 32.187,33.798 L46.672,33.798 C48.449,33.798 49.891,35.239 49.891,37.017 L49.891,38.625 L70.813,38.625 C72.590,38.625 74.031,40.066 74.031,41.844 L74.031,45.063 C75.809,45.063 77.250,46.504 77.250,48.282 L70.813,65.985 C70.813,67.763 69.371,69.204 67.594,69.204 ZM70.813,41.844 L48.281,41.844 L46.672,41.844 L46.672,37.017 L32.187,37.017 L32.187,41.844 L32.187,45.063 L70.813,45.063 L70.813,41.844 ZM70.813,48.282 L45.062,48.282 L43.453,48.282 L32.187,48.282 L28.969,48.282 L35.406,65.985 L67.594,65.985 L74.031,48.282 L70.813,48.282 Z" class="cls-1"/>
+</svg>

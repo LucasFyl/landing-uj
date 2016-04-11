@@ -1,0 +1,37 @@
+/* Main Project imports ***********************/
+
+/*  Various project settings
+    that need to be set globally    ***********************/
+
+/* Bourbon & Neat Libraries ***********************/
+@import "./bower_components/bourbon/app/assets/stylesheets/_bourbon";
+@import "_base/_grid-settings";
+@import "./bower_components/neat/app/assets/stylesheets/_neat";
+
+/* Own mixins ***********************/
+@import "_addons/_rem"; // Rem sizing mixin
+@import "_addons/_retina"; // Retina mixin to replace background-image
+
+/* Base styles ***********************/
+@import "_base/_colours";
+@import "_base/_easings";
+@import "_base/_normalize";
+@import "_base/_type";
+@import "_base/_font-face";
+@import "_base/_grid";
+@import "_base/_forms";
+@import "_base/_base";
+
+/* Reusable Component styles (header/footer/dropdowns etc)
+   Put them inside "common" folder ***********************/
+@import "common/_home";
+@import "common/_popup";
+
+
+/* Module styles (individual page styles)
+   Put them inside "modules" folder ***********************/
+
+
+/* Plugin styles
+   Put them inside "plugins" folder ***********************/
+
