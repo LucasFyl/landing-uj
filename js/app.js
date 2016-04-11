@@ -25,14 +25,14 @@ $(document).ready(function(){
 function initPage(){
 
 	$('#overlay').hide();
-	TweenMax.set('#landing h1, #landing h2, .price-box', {opacity:0});
-	TweenMax.set('#landing h1', {y:20});
-	TweenMax.set('.price-box', {y:-20});
-	TweenMax.set('.caret-down', {opacity:0,y:-30});
+	// TweenMax.set('#landing h1, #landing h2, .price-box', {opacity:0});
+	// TweenMax.set('#landing h1', {y:20});
+	// TweenMax.set('.price-box', {y:-20});
+	// TweenMax.set('.caret-down', {opacity:0,y:-30});
 	
 
 	hideLoader();
-	setTimeout(landingAnimation, 3000);
+	// setTimeout(landingAnimation, 3000);
 
 	if ( $('.isMobile').is(':visible') ) {
 		$('.gallery > div').addClass('active');
