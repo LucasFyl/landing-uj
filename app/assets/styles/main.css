@@ -105,6 +105,34 @@ textarea {
   overflow: auto;
 }
 
+.tilt {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backface-visibility: hidden;
+}
+
+.tilt__back {
+  position: relative;
+}
+
+.tilt__front {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /* Base ***********************/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -2903,12 +2931,19 @@ header#landing-page-header nav ul li a:hover {
   line-height: 1;
   letter-spacing: .8rem;
 }
+#outer-wrap section hr {
+  max-width: 10rem;
+}
 #outer-wrap section:nth-child(2) {
   background: #aeaead;
 }
 #outer-wrap section:nth-child(4) {
   background: url(../images/asset-bg-1.jpg) no-repeat center center;
   background-size: cover;
+}
+#outer-wrap section:nth-child(4) .center-block h2,
+#outer-wrap section:nth-child(4) .center-block p {
+  color: #7f8180;
 }
 #outer-wrap section:nth-child(5) {
   background: #d2c4ba;
@@ -2923,6 +2958,19 @@ header#landing-page-header nav ul li a:hover {
 #outer-wrap section:nth-child(8) {
   background: url(../images/asset-bg-3.jpg) no-repeat center center;
   background-size: cover;
+}
+#outer-wrap section:nth-child(8):before {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.25);
+  transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 #outer-wrap section.landing {
   min-height: calc(100vh - 6.5rem );
@@ -2948,4 +2996,35 @@ header#landing-page-header nav ul li a:hover {
   min-width: 16.2rem;
   width: 16.2rem;
   letter-spacing: .15rem;
+}
+#outer-wrap section.price .pricebox {
+  width: 100vw;
+  max-width: 100% !important;
+  height: calc(100vh - 7.5rem);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -1;
+}
+#outer-wrap section.price .tilt > div {
+  background-size: 25%;
+}
+#outer-wrap section.price p {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+#outer-wrap section.price p.big {
+  font-family: 'FuturaStdMedium', sans-serif;
+  font-size: 7.5rem;
+}
+#outer-wrap section.price .btn, #outer-wrap section.price input[type="button"],
+#outer-wrap section.price button[type="submit"], #outer-wrap section.price .md-dialog-container md-dialog button:not([aria-label="Close"]), .md-dialog-container md-dialog #outer-wrap section.price button:not([aria-label="Close"]) {
+  margin-top: 4.5rem;
+  min-width: 17.2rem;
+  width: 17.2rem;
 }
