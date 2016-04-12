@@ -123,7 +123,7 @@
 		movement : {
 			perspective : 600, // perspective value
 			translateX : -10, // a relative movement of -10px to 10px on the x-axis (setting a negative value reverses the direction)
-			translateY : -10, // a relative movement of -10px to 10px on the y-axis 
+			translateY : 10, // a relative movement of -10px to 10px on the y-axis 
 			translateZ : 10, // a relative movement of -20px to 20px on the z-axis (perspective value must be set). Also, this specific translation is done when the mouse moves vertically.
 			rotateX : 10, // a relative rotation of -2deg to 2deg on the x-axis (perspective value must be set)
 			rotateY : 10, // a relative rotation of -2deg to 2deg on the y-axis (perspective value must be set)

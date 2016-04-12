@@ -1407,8 +1407,7 @@ button.thin[type="submit"], .md-dialog-container md-dialog button.thin:not([aria
 }
 
 .landing-page,
-#outer-wrap section,
-#outer-wrap section.landing {
+#outer-wrap section {
   min-width: calc(100vw - 10rem );
   min-height: calc(100vh - 10rem );
   height: 100%;
@@ -2835,7 +2834,7 @@ md-dialog#document-storage-modal .light-btn, md-dialog#document-storage-modal .c
   margin-top: -4rem;
 }
 #loader .logo {
-  background: url(../images/logo-black.svg) no-repeat top left;
+  background: url(../images/logo-grey.svg) no-repeat top left;
   background-size: 21rem;
   display: inline-block;
   vertical-align: top;
@@ -2859,10 +2858,36 @@ body button.small[type="submit"], body .md-dialog-container md-dialog button.sma
   width: 17.2rem;
 }
 
+#scrolltop {
+  height: 5rem;
+  width: 5rem;
+  background: white;
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 999;
+  right: 5rem;
+  bottom: 5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#scrolltop:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#scrolltop .icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("../images/asset-icon-scrolltop.png") no-repeat center center;
+  background-size: 1.2rem 0.75rem;
+}
+
 header#landing-page-header {
   height: 6.5rem;
   background: white;
-  position: fixed;
+  position: absolute;
   z-index: 999;
   top: 0;
   left: 0;
@@ -2919,6 +2944,9 @@ header#landing-page-header nav ul li a:hover {
   z-index: 99;
   padding-top: 6.5rem;
 }
+#outer-wrap section {
+  height: calc(100vh - 7.5rem);
+}
 #outer-wrap section h2.sub {
   text-transform: uppercase;
   color: white;
@@ -2947,6 +2975,9 @@ header#landing-page-header nav ul li a:hover {
 }
 #outer-wrap section:nth-child(2) {
   background: #aeaead;
+}
+#outer-wrap section:nth-child(2) h2.main {
+  font-size: 4.5rem;
 }
 #outer-wrap section:nth-child(4) {
   background: url(../images/asset-bg-1.jpg) no-repeat center center;
@@ -3000,7 +3031,6 @@ header#landing-page-header nav ul li a:hover {
   max-width: 85rem;
 }
 #outer-wrap section.landing {
-  min-height: calc(100vh - 6.5rem );
   background: url(../images/asset-landing.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -3024,6 +3054,20 @@ header#landing-page-header nav ul li a:hover {
   width: 16.2rem;
   letter-spacing: .15rem;
 }
+#outer-wrap section.tools {
+  padding-top: 15rem;
+}
+#outer-wrap section.tools h2, #outer-wrap section.tools p {
+  color: #7f8180;
+  text-align: center;
+}
+#outer-wrap section.tools h2.main {
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+}
+#outer-wrap section.tools h2.main + p {
+  margin-bottom: 10rem;
+}
 #outer-wrap section.price .pricebox {
   width: 100vw;
   max-width: 100% !important;
@@ -3037,7 +3081,7 @@ header#landing-page-header nav ul li a:hover {
   z-index: -1;
 }
 #outer-wrap section.price .tilt, #outer-wrap section.price .tilt > div {
-  transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.75s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 #outer-wrap section.price .tilt > div {
   background-size: 25%;

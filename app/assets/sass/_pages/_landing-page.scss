@@ -6,10 +6,28 @@ body {
 		width: 17.2rem;
 	}
 }
+#scrolltop {
+	@include size(5rem);
+	background:white;
+	display: block;
+	cursor: pointer;
+
+	position: fixed;
+	z-index: 999;
+	right: 5rem;
+	bottom: 5rem;
+	@include levitable(1, 2);
+	.icon {
+		position: absolute;
+		@include size(100%);
+		background:url('../images/asset-icon-scrolltop.png') no-repeat center center;
+		background-size: 1.2rem 0.75rem;
+	}
+}
 header#landing-page-header {
 	height: 6.5rem;
 	background: white;
-	position: fixed;
+	position: absolute;
 	z-index: 999;
 	top: 0; left: 0;right: 0;
 	width: 100%;
@@ -67,6 +85,9 @@ header#landing-page-header {
 	padding-top: 6.5rem;
 
 	section {
+		@extend .landing-page;
+		height: calc(100vh - 7.5rem);
+
 		h2.sub {
 			text-transform: uppercase;
 			color: white;
@@ -96,9 +117,11 @@ header#landing-page-header {
 			max-width: 10rem;
 		}
 
-		@extend .landing-page;
 		&:nth-child(2) {
 			background: #aeaead;
+			h2.main {
+				font-size:4.5rem;
+			}
 		}
 		// TO DO TOOLS
 		&:nth-child(4) {
@@ -132,8 +155,6 @@ header#landing-page-header {
 		
 	}
 	section.landing {
-		@extend .landing-page;
-		min-height: calc(100vh - 6.5rem );
 	    background: url(../images/asset-landing.jpg) no-repeat center center;
 	    background-size: cover;
 	    @include overlay(rgba(0,0,0,0.2));
@@ -145,8 +166,21 @@ header#landing-page-header {
 			letter-spacing: .15rem;
 	    }
 	}
+	section.tools {
+		padding-top: 15rem;
+		h2, p {
+			color: #7f8180;
+			text-align: center;
+		}
+		h2.main {
+			font-size: 4rem;
+			margin-bottom: 2.5rem;
+			+ p {
+				margin-bottom: 10rem;
+			}
+		}
+	}
 	section.price {
-
 		.pricebox {
 			width: 100vw;
 			max-width: 100% !important;
@@ -155,18 +189,9 @@ header#landing-page-header {
 			left: 0;right: 0;top: 0;bottom: 0;
 			margin: auto;
 			z-index: -1;
-			// @include levitable(3, 4);
-
-			// transition-duration: 1s;
-			// -moz-transition-duration: 1s;
-			// &:hover {
-			// 	// @include transform(scale(1.02));
-			// 	transition-duration: 1s;
-			// 	-moz-transition-duration: 1s;
-			// }
 		}
 		.tilt, .tilt > div {
-			@include transition(all 0.5s $ease-out-sine);
+			@include transition(all 0.75s $ease-out-sine);
 		}
 		.tilt > div {
 			background-size: 25%;
