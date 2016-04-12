@@ -2851,6 +2851,12 @@ md-dialog#document-storage-modal .light-btn, md-dialog#document-storage-modal .c
 }
 
 /* Module styles (individual page styles) ***********************/
+body.locked {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
 body .btn.small, body input.small[type="button"],
 body button.small[type="submit"], body .md-dialog-container md-dialog button.small:not([aria-label="Close"]), .md-dialog-container md-dialog body button.small:not([aria-label="Close"]) {
   margin-top: 4.5rem;

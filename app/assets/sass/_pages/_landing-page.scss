@@ -1,5 +1,10 @@
 body {
 	$base-font: $book;
+	&.locked {
+		@include size(100%);
+		position: fixed;
+		overflow: hidden;
+	}
 	.btn.small {
 		margin-top: 4.5rem;
 		min-width: 17.2rem;
