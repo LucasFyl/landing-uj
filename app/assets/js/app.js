@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-	$('body').addClass('locked');
+	// $('body').addClass('locked');
 	initPage();
 
 	$('#scrolltop').on('click', scrollTopFn);

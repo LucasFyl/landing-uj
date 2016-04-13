@@ -2949,6 +2949,7 @@ header#landing-page-header nav ul li a:hover {
   position: relative;
   z-index: 99;
   padding-top: 6.5rem;
+  margin-bottom: 82.1rem;
 }
 #outer-wrap section {
   height: calc(100vh - 7.5rem);
@@ -3101,4 +3102,181 @@ header#landing-page-header nav ul li a:hover {
 #outer-wrap section.price p.big {
   font-family: 'FuturaStdMedium', sans-serif;
   font-size: 7.5rem;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+}
+footer .logo-block {
+  padding-top: 20rem;
+}
+footer .logo-block h4 {
+  text-align: center;
+  color: #7f8180;
+  font-size: 3rem;
+  margin: 0 auto 17rem;
+  letter-spacing: .65rem;
+}
+footer p.newsletter {
+  margin: 0 auto 7.5rem;
+  text-align: center;
+  min-width: 67rem;
+}
+footer p.newsletter a > span {
+  position: relative;
+  display: inline-block;
+}
+footer p.newsletter a > span:after {
+  content: " ";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  background-color: transparent;
+  transition: background-color 0.25s ease;
+}
+footer p.newsletter a:hover > span::after {
+  background-color: #a6a6a6;
+  transition: background-color 0.25s ease;
+}
+footer p.newsletter a, footer p.newsletter input {
+  text-transform: uppercase;
+  color: #a6a6a6;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: .2rem;
+}
+footer p.newsletter input {
+  font-family: "FuturaStdHeavy", sans-serif;
+}
+footer section.links {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+footer section.links > div {
+  width: 50%;
+  padding: 8rem 0;
+}
+footer section.links .social {
+  border-right: 1px solid #ccc;
+}
+footer section.links .social ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: none;
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+}
+footer section.links .social ul li {
+  line-height: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+footer section.links .social ul li:hover {
+  transform: translateY(-3px);
+  transition: transform 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+footer section.links .social ul li a {
+  text-indent: -9999px;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+footer section.links .social ul li a.facebook {
+  background: url("../images/asset-icon-facebook.png") no-repeat center center;
+  background-size: 1rem 2rem;
+}
+footer section.links .social ul li a.twitter {
+  background: url("../images/asset-icon-twitter.png") no-repeat center center;
+  background-size: 2.5rem 2rem;
+}
+footer section.links .social ul li a.pinterest {
+  background: url("../images/asset-icon-pinterest.png") no-repeat center center;
+  background-size: 1.5rem 2rem;
+}
+footer section.links .social ul li a.instagram {
+  background: url("../images/asset-icon-instagram.png") no-repeat center center;
+  background-size: 2.1rem 2rem;
+}
+footer section.links .email a {
+  height: 100%;
+  width: 100%;
+  line-height: 2.2rem;
+  position: relative;
+  width: 24.5rem;
+  display: block;
+  margin: 0 auto;
+  padding-left: 5rem;
+  font-family: "FuturaStdBook", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  color: #959595;
+}
+footer section.links .email a > span {
+  position: relative;
+  display: inline-block;
+}
+footer section.links .email a > span:after {
+  content: " ";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  background-color: transparent;
+  transition: background-color 0.25s ease;
+}
+footer section.links .email a:hover > span::after {
+  background-color: #959595;
+  transition: background-color 0.25s ease;
+}
+footer section.links .email a .icon {
+  height: 1.75rem;
+  width: 2rem;
+  display: block;
+  position: absolute;
+  left: 0;
+  background: url("../images/asset-icon-email.png") no-repeat left center;
+  background-size: 2rem 1.75rem;
+}
+footer nav.footer-links {
+  width: 56rem;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer nav.footer-links p, footer nav.footer-links a {
+  font-family: "FuturaStdBook", sans-serif;
+  font-size: 1.3rem;
+  color: #959595;
+  text-decoration: none;
+  margin: 0;
+}
+footer nav.footer-links a > span {
+  position: relative;
+  display: inline-block;
+}
+footer nav.footer-links a > span:after {
+  content: " ";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  background-color: transparent;
+  transition: background-color 0.25s ease;
+}
+footer nav.footer-links a:hover > span::after {
+  background-color: #959595;
+  transition: background-color 0.25s ease;
 }

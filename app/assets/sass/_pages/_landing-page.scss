@@ -89,6 +89,9 @@ header#landing-page-header {
 	z-index: 99;
 	padding-top: 6.5rem;
 
+	// for fixed footer: 
+    margin-bottom: 82.1rem;
+
 	section {
 		@extend .landing-page;
 		height: calc(100vh - 7.5rem);
@@ -214,5 +217,148 @@ header#landing-page-header {
 		}
 		.btn {
 		}
+	}
+}
+
+footer {
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+
+	.logo-block {
+		padding-top: 20rem;
+		h4 {
+			text-align: center;
+			color: #7f8180;
+			font-size: 3rem;
+			margin: 0 auto 17rem;
+			letter-spacing: .65rem;
+		}
+	}
+	p.newsletter {
+		margin: 0 auto 7.5rem;
+		text-align: center;
+		min-width: 67rem;
+		a {
+			@include underlined(transparent, #a6a6a6);
+		}
+		a, input {
+			text-transform: uppercase;
+			color: #a6a6a6;
+			font-size: 2rem;
+			line-height: 2rem;
+			letter-spacing: .2rem;
+		}
+		input {
+			font-family: $heavy;
+		}
+	}
+
+	section.links {
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+
+		display: flex;
+		> div {
+			width: 50%;
+			padding: 8rem 0;
+		}
+		.social {
+			border-right: 1px solid #ccc;
+
+			ul {
+				padding: 0;margin: 0 auto;
+				list-style-type: none;
+				width: 25rem;
+					
+				display: flex;
+				justify-content: space-between;
+
+
+				li {
+					line-height: 2.5rem;
+					@include size(2.5rem);
+
+					@include transition(transform 0.25s $ease-out-quad);
+					&:hover {
+						@include transform(translateY(-3px));
+						@include transition(transform 0.25s $ease-in-quad);
+					}
+
+					a {
+						text-indent: -9999px; 
+						@include size(100%);
+						display: block;
+
+
+						&.facebook {
+							background:url('../images/asset-icon-facebook.png') no-repeat center center;
+							background-size: 1rem 2rem;
+						}
+
+						&.twitter {
+							background:url('../images/asset-icon-twitter.png') no-repeat center center;
+							background-size: 2.5rem 2rem;
+						}
+
+						&.pinterest {
+							background:url('../images/asset-icon-pinterest.png') no-repeat center center;
+							background-size: 1.5rem 2rem;
+						}
+
+						&.instagram {
+							background:url('../images/asset-icon-instagram.png') no-repeat center center;
+							background-size: 2.1rem 2rem;
+						}
+					}
+				}
+			}
+		}
+		.email {
+			a {
+				@include size(100%);
+				line-height: 2.2rem;
+				position: relative;
+
+				width: 24.5rem;
+				display: block;
+				margin: 0 auto;
+				padding-left: 5rem;
+				
+				font-family: $book;
+				text-align: center;
+				font-size: 2rem;
+				color: #959595;
+				@include underlined(transparent, #959595);
+				
+				.icon {
+					@include size(2rem 1.75rem);
+					display: block;
+					position: absolute;
+					left: 0;
+					background:url('../images/asset-icon-email.png') no-repeat left center;
+					background-size: 2rem 1.75rem;
+				}
+			}
+		}
+	}
+
+	nav.footer-links {
+		p, a {
+			font-family: $book;
+			font-size: 1.3rem;
+			color: #959595;
+			text-decoration: none;
+			margin: 0;
+		}
+		a {
+			@include underlined(transparent, #959595);
+		}
+
+		width: 56rem;
+		margin: 5rem auto;
+		display: flex;
+		justify-content: space-between;
 	}
 }
