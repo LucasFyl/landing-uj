@@ -131,7 +131,7 @@ header#landing-page-header {
 				font-size:4.5rem;
 			}
 		}
-		// TO DO TOOLS
+		// 3 : Tools
 		&:nth-child(4) {
 			background: url(../images/asset-bg-1.jpg) no-repeat center center;
 			background-size: cover;
@@ -176,6 +176,7 @@ header#landing-page-header {
 	}
 	section.tools {
 		padding-top: 15rem;
+		background:white;
 		h2, p {
 			color: #7f8180;
 			text-align: center;
@@ -186,6 +187,16 @@ header#landing-page-header {
 			+ p {
 				margin-bottom: 10rem;
 			}
+		}
+
+		#tools-menu {
+			position: relative;
+			width: 100%;
+		    margin: 0;
+		    border-bottom: 1px solid #cccccc;
+		    overflow-y: hidden;
+		    padding-top: 5rem;
+		    height: 10rem;
 		}
 	}
 	section.price {

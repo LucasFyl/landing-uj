@@ -2713,111 +2713,111 @@ md-dialog#document-storage-modal .light-btn, md-dialog#document-storage-modal .c
   box-sizing: content-box;
 }
 #tools-menu ul li.budget .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-budget.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-budget.png") no-repeat center center;
   background-size: 0.9rem 1.7rem;
 }
 #tools-menu ul li.budget .circle {
-  background: #597981 url("../assets/images/tools-icons/asset-icon-nav-budget-white.png") no-repeat center center;
+  background: #597981 url("../images/tools-icons/asset-icon-nav-budget-white.png") no-repeat center center;
   background-size: 0.9rem 1.7rem;
 }
 #tools-menu ul li.budget.active .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-budget-active.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-budget-active.png") no-repeat center center;
   background-size: 0.9rem 1.7rem;
 }
 #tools-menu ul li.calendar .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-calendar.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-calendar.png") no-repeat center center;
   background-size: 1.9rem 1.7rem;
 }
 #tools-menu ul li.calendar .circle {
-  background: #597981 url("../assets/images/tools-icons/asset-icon-nav-calendar-white.png") no-repeat center center;
+  background: #597981 url("../images/tools-icons/asset-icon-nav-calendar-white.png") no-repeat center center;
   background-size: 1.9rem 1.7rem;
 }
 #tools-menu ul li.calendar.active .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-calendar-active.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-calendar-active.png") no-repeat center center;
   background-size: 1.9rem 1.7rem;
 }
 #tools-menu ul li.design .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-design.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-design.png") no-repeat center center;
   background-size: 1.85rem;
 }
 #tools-menu ul li.design .circle {
-  background: #597981 url("../assets/images/tools-icons/asset-icon-nav-design-white.png") no-repeat center center;
+  background: #597981 url("../images/tools-icons/asset-icon-nav-design-white.png") no-repeat center center;
   background-size: 1.85rem;
 }
 #tools-menu ul li.design.active .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-design-active.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-design-active.png") no-repeat center center;
   background-size: 1.85rem;
 }
 #tools-menu ul li.documents .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-documents.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-documents.png") no-repeat center center;
   background-size: 1.85rem 1.3rem;
 }
 #tools-menu ul li.documents .circle {
-  background: #597981 url("../assets/images/tools-icons/asset-icon-nav-documents-white.png") no-repeat center center;
+  background: #597981 url("../images/tools-icons/asset-icon-nav-documents-white.png") no-repeat center center;
   background-size: 1.85rem 1.3rem;
 }
 #tools-menu ul li.documents.active .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-documents-active.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-documents-active.png") no-repeat center center;
   background-size: 1.85rem 1.3rem;
 }
 #tools-menu ul li.guests .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-guests.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-guests.png") no-repeat center center;
   background-size: 1.6rem 1.7rem;
 }
 #tools-menu ul li.guests .circle {
-  background: #597981 url("../assets/images/tools-icons/asset-icon-nav-guests-white.png") no-repeat center center;
+  background: #597981 url("../images/tools-icons/asset-icon-nav-guests-white.png") no-repeat center center;
   background-size: 1.6rem 1.7rem;
 }
 #tools-menu ul li.guests.active .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-guests-active.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-guests-active.png") no-repeat center center;
   background-size: 1.6rem 1.7rem;
 }
 #tools-menu ul li.vendor .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-vendors.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-vendors.png") no-repeat center center;
   background-size: 1.8rem 1.5rem;
 }
 #tools-menu ul li.vendor .circle {
-  background: #597981 url("../assets/images/tools-icons/asset-icon-nav-vendors-white.png") no-repeat center center;
+  background: #597981 url("../images/tools-icons/asset-icon-nav-vendors-white.png") no-repeat center center;
   background-size: 1.8rem 1.5rem;
 }
 #tools-menu ul li.vendor.active .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-vendors-active.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-vendors-active.png") no-repeat center center;
   background-size: 1.8rem 1.5rem;
 }
 #tools-menu ul li.itinerary .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-timeline.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-timeline.png") no-repeat center center;
   background-size: 1.5rem 1.75rem;
 }
 #tools-menu ul li.itinerary .circle {
-  background: #597981 url("../assets/images/tools-icons/asset-icon-nav-timeline-white.png") no-repeat center center;
+  background: #597981 url("../images/tools-icons/asset-icon-nav-timeline-white.png") no-repeat center center;
   background-size: 1.5rem 1.75rem;
 }
 #tools-menu ul li.itinerary.active .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-timeline-active.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-timeline-active.png") no-repeat center center;
   background-size: 1.5rem 1.75rem;
 }
 #tools-menu ul li.tasks .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-tasks.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-tasks.png") no-repeat center center;
   background-size: 1.75rem 1.6rem;
 }
 #tools-menu ul li.tasks .circle {
-  background: #597981 url("../assets/images/tools-icons/asset-icon-nav-tasks-white.png") no-repeat center center;
+  background: #597981 url("../images/tools-icons/asset-icon-nav-tasks-white.png") no-repeat center center;
   background-size: 1.75rem 1.6rem;
 }
 #tools-menu ul li.tasks.active .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-tasks-active.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-tasks-active.png") no-repeat center center;
   background-size: 1.75rem 1.6rem;
 }
 #tools-menu ul li.wwebsite .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-wwebsite.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-wwebsite.png") no-repeat center center;
   background-size: 1.3rem 1.2rem;
 }
 #tools-menu ul li.wwebsite .circle {
-  background: #597981 url("../assets/images/tools-icons/asset-icon-nav-wwebsite-white.png") no-repeat center center;
+  background: #597981 url("../images/tools-icons/asset-icon-nav-wwebsite-white.png") no-repeat center center;
   background-size: 1.3rem 1.2rem;
 }
 #tools-menu ul li.wwebsite.active .icon {
-  background: url("../assets/images/tools-icons/asset-icon-nav-wwebsite-active.png") no-repeat center center;
+  background: url("../images/tools-icons/asset-icon-nav-wwebsite-active.png") no-repeat center center;
   background-size: 1.3rem 1.2rem;
 }
 
@@ -3063,6 +3063,7 @@ header#landing-page-header nav ul li a:hover {
 }
 #outer-wrap section.tools {
   padding-top: 15rem;
+  background: white;
 }
 #outer-wrap section.tools h2, #outer-wrap section.tools p {
   color: #7f8180;
@@ -3074,6 +3075,15 @@ header#landing-page-header nav ul li a:hover {
 }
 #outer-wrap section.tools h2.main + p {
   margin-bottom: 10rem;
+}
+#outer-wrap section.tools #tools-menu {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid #cccccc;
+  overflow-y: hidden;
+  padding-top: 5rem;
+  height: 10rem;
 }
 #outer-wrap section.price .pricebox {
   width: 100vw;
