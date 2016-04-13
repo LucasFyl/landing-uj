@@ -2272,6 +2272,26 @@ md-switch.md-checked .md-ink-ripple {
 html {
   font-size: 62.5%;
 }
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 83.3%;
+  }
+}
+@media screen and (min-width: 1450px) and (max-width: 1920px) {
+  html {
+    font-size: 71.4%;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1350px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
 
 body {
   position: relative;

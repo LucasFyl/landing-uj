@@ -15,6 +15,22 @@
  */
 html {
   font-size: 62.5%;
+  // Very big screen above 1920px
+  @include media(min-width 1920px) {
+    font-size: 83.3%;
+  }
+  // Big screen between 1450 and 1920px
+  @include media(min-width 1450px max-width 1920px)  {
+    font-size: 71.4%;
+  }
+  // Medium screeens between 1000px and 1350px
+  @include media(min-width 1000px max-width 1350px) {
+    font-size: 50%;
+  }
+  // Small screen between 480px and 1000px
+  @include media(min-width 480px max-width 600px) {
+    font-size: 30%;
+  }
 }
 
 body {
