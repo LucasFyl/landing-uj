@@ -175,6 +175,7 @@ header#landing-page-header {
 	    }
 	}
 	section.tools {
+		height: auto;
 		padding-top: 15rem;
 		background:white;
 		h2, p {
@@ -197,6 +198,72 @@ header#landing-page-header {
 		    overflow-y: hidden;
 		    padding-top: 5rem;
 		    height: 10rem;
+		    li {
+		    	cursor: pointer;
+		    }
+		}
+		#tools-slider {
+			padding-top: 10rem;
+			padding-bottom: 10rem;
+			.slide {
+				@include size(100vw 45.5rem);
+				display: flex;
+				> div {
+					width: 50%;
+					flex-grow:1;
+				}
+				div.left {
+					.center-block {
+						@include center(vertical);
+					}
+					height: 100%;
+					padding: 0 12.5rem;
+				
+					h4 {
+						color: #587883;
+						font-size: 1.8rem;
+						font-family: $base-font;
+						letter-spacing: .3rem;
+						margin-bottom: 4.5rem;
+						text-align: left;
+					}
+					p {
+						font-family: $book;
+						font-size: 3rem;
+						color: #8a8a8a;
+						text-align: left;
+					}
+
+					.arrows {
+						@include size(6.8rem 3rem);
+						display: flex;
+						margin-bottom: 7rem;
+						
+						a {
+							display: block; 
+							width: 50%;
+
+							&.left {
+								background:url('../images/asset-icon-caret-left.png') no-repeat left center;
+								background-size: 1.35rem 2.25rem;
+							}
+							&.right {
+								background:url('../images/asset-icon-caret-right.png') no-repeat right center;
+								background-size: 1.35rem 2.25rem;
+							}
+
+						}
+					}
+				}
+				.right img {
+					@include BoxShadowHelper(3);
+					box-shadow: 0.75rem 0.75rem 5rem .3rem rgba(0,0,0,0.2);
+					// @include transition(box-shadow 0.5s $ease-in-out-sine);
+					// &:hover {
+					// 	box-shadow: 0.95rem 0.95rem 6rem .4rem rgba(0,0,0,0.17);
+					// }
+				}
+			}
 		}
 	}
 	section.price {
