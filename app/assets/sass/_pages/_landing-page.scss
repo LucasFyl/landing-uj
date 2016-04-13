@@ -29,7 +29,7 @@ body {
 		background-size: 1.2rem 0.75rem;
 	}
 }
-header#landing-page-header {
+header#landing-header {
 	height: 6.5rem;
 	background: white;
 	position: absolute;
@@ -94,7 +94,7 @@ header#landing-page-header {
 
 	section {
 		@extend .landing-page;
-		height: calc(100vh - 7.5rem);
+		height: calc(100vh - 6.5rem);
 
 		h2.sub {
 			text-transform: uppercase;
@@ -202,23 +202,54 @@ header#landing-page-header {
 		    	cursor: pointer;
 		    }
 		}
+
+		.arrows {
+			@include size(6.8rem 3rem);
+			display: flex;
+			margin-bottom: 7rem;
+
+			position: absolute;
+			z-index: 999;
+			left:12.5rem; top: 18rem;
+
+			a {
+				display: block; 
+				width: 50%;
+
+				&.left {
+					background:url('../images/asset-icon-caret-left.png') no-repeat left center;
+					background-size: 1.35rem 2.25rem;
+				}
+				&.right {
+					background:url('../images/asset-icon-caret-right.png') no-repeat right center;
+					background-size: 1.35rem 2.25rem;
+				}
+
+			}
+		}
 		#tools-slider {
-			padding-top: 10rem;
-			padding-bottom: 10rem;
+			position: relative;
+
 			.slide {
-				@include size(100vw 45.5rem);
+				@include size(100vw 65.5rem);
+				padding-top: 10rem;
+				padding-bottom: 10rem;
 				display: flex;
+				overflow-x:hidden;
+				overflow-y:visible;
 				> div {
+					height: 100%;
 					width: 50%;
 					flex-grow:1;
 				}
+
 				div.left {
+					padding: 0 12.5rem;
+
 					.center-block {
 						@include center(vertical);
+						padding-top: 10rem;
 					}
-					height: 100%;
-					padding: 0 12.5rem;
-				
 					h4 {
 						color: #587883;
 						font-size: 1.8rem;
@@ -234,34 +265,22 @@ header#landing-page-header {
 						text-align: left;
 					}
 
-					.arrows {
-						@include size(6.8rem 3rem);
-						display: flex;
-						margin-bottom: 7rem;
-						
-						a {
-							display: block; 
-							width: 50%;
-
-							&.left {
-								background:url('../images/asset-icon-caret-left.png') no-repeat left center;
-								background-size: 1.35rem 2.25rem;
-							}
-							&.right {
-								background:url('../images/asset-icon-caret-right.png') no-repeat right center;
-								background-size: 1.35rem 2.25rem;
-							}
-
-						}
-					}
+					
 				}
 				.right img {
-					@include BoxShadowHelper(3);
+					// @include BoxShadowHelper(3);
 					box-shadow: 0.75rem 0.75rem 5rem .3rem rgba(0,0,0,0.2);
+					@include center(vertical);
+					position: relative;
 					// @include transition(box-shadow 0.5s $ease-in-out-sine);
 					// &:hover {
 					// 	box-shadow: 0.95rem 0.95rem 6rem .4rem rgba(0,0,0,0.17);
 					// }
+				}
+
+				// For animation : 
+				p, h4, img {
+					opacity: 0;
 				}
 			}
 		}

@@ -730,7 +730,7 @@ th {
   background-size: 17rem  2rem;
   background-position-y: 1.6rem;
 }
-.logo.grey, header#landing-page-header h1.logo {
+.logo.grey, header#landing-header h1.logo {
   background: url("../images/logo-grey.svg") no-repeat;
   background-size: 17rem  2rem;
   background-position-y: 1.6rem;
@@ -2910,7 +2910,7 @@ body button.small[type="submit"], body .md-dialog-container md-dialog button.sma
   background-size: 1.2rem 0.75rem;
 }
 
-header#landing-page-header {
+header#landing-header {
   height: 6.5rem;
   background: white;
   position: absolute;
@@ -2920,7 +2920,7 @@ header#landing-page-header {
   right: 0;
   width: 100%;
 }
-header#landing-page-header h1.logo {
+header#landing-header h1.logo {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -2928,25 +2928,25 @@ header#landing-page-header h1.logo {
   height: 6.5rem;
   background-position-y: center;
 }
-header#landing-page-header nav {
+header#landing-header nav {
   position: absolute;
   right: 0;
   top: 0;
 }
-header#landing-page-header nav ul {
+header#landing-header nav ul {
   padding: 0;
   margin: 0;
   display: flex;
   list-style: none;
 }
-header#landing-page-header nav ul li {
+header#landing-header nav ul li {
   width: 13rem;
   border-left: 1px solid #ccc;
   text-align: center;
   height: 6.5rem;
   line-height: 6.5rem;
 }
-header#landing-page-header nav ul li a {
+header#landing-header nav ul li a {
   height: 100%;
   width: 100%;
   display: block;
@@ -2958,7 +2958,7 @@ header#landing-page-header nav ul li a {
   font-size: 1.5rem;
   transition: background 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
-header#landing-page-header nav ul li a:hover {
+header#landing-header nav ul li a:hover {
   text-decoration: underline;
   background: #fafafa;
 }
@@ -2972,7 +2972,7 @@ header#landing-page-header nav ul li a:hover {
   margin-bottom: 82.1rem;
 }
 #outer-wrap section {
-  height: calc(100vh - 7.5rem);
+  height: calc(100vh - 6.5rem);
 }
 #outer-wrap section h2.sub {
   text-transform: uppercase;
@@ -3109,27 +3109,53 @@ header#landing-page-header nav ul li a:hover {
 #outer-wrap section.tools #tools-menu li {
   cursor: pointer;
 }
+#outer-wrap section.tools .arrows {
+  height: 3rem;
+  width: 6.8rem;
+  display: flex;
+  margin-bottom: 7rem;
+  position: absolute;
+  z-index: 999;
+  left: 12.5rem;
+  top: 18rem;
+}
+#outer-wrap section.tools .arrows a {
+  display: block;
+  width: 50%;
+}
+#outer-wrap section.tools .arrows a.left {
+  background: url("../images/asset-icon-caret-left.png") no-repeat left center;
+  background-size: 1.35rem 2.25rem;
+}
+#outer-wrap section.tools .arrows a.right {
+  background: url("../images/asset-icon-caret-right.png") no-repeat right center;
+  background-size: 1.35rem 2.25rem;
+}
 #outer-wrap section.tools #tools-slider {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  position: relative;
 }
 #outer-wrap section.tools #tools-slider .slide {
-  height: 45.5rem;
+  height: 65.5rem;
   width: 100vw;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   display: flex;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 #outer-wrap section.tools #tools-slider .slide > div {
+  height: 100%;
   width: 50%;
   flex-grow: 1;
 }
 #outer-wrap section.tools #tools-slider .slide div.left {
-  height: 100%;
   padding: 0 12.5rem;
 }
 #outer-wrap section.tools #tools-slider .slide div.left .center-block {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  padding-top: 10rem;
 }
 #outer-wrap section.tools #tools-slider .slide div.left h4 {
   color: #587883;
@@ -3145,27 +3171,15 @@ header#landing-page-header nav ul li a:hover {
   color: #8a8a8a;
   text-align: left;
 }
-#outer-wrap section.tools #tools-slider .slide div.left .arrows {
-  height: 3rem;
-  width: 6.8rem;
-  display: flex;
-  margin-bottom: 7rem;
-}
-#outer-wrap section.tools #tools-slider .slide div.left .arrows a {
-  display: block;
-  width: 50%;
-}
-#outer-wrap section.tools #tools-slider .slide div.left .arrows a.left {
-  background: url("../images/asset-icon-caret-left.png") no-repeat left center;
-  background-size: 1.35rem 2.25rem;
-}
-#outer-wrap section.tools #tools-slider .slide div.left .arrows a.right {
-  background: url("../images/asset-icon-caret-right.png") no-repeat right center;
-  background-size: 1.35rem 2.25rem;
-}
 #outer-wrap section.tools #tools-slider .slide .right img {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0.75rem 0.75rem 5rem 0.3rem rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+#outer-wrap section.tools #tools-slider .slide p, #outer-wrap section.tools #tools-slider .slide h4, #outer-wrap section.tools #tools-slider .slide img {
+  opacity: 0;
 }
 #outer-wrap section.price .pricebox {
   width: 100vw;
