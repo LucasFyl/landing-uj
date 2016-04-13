@@ -64,7 +64,7 @@ function initSlider() {
 
 		beforeChangeTl
 			.to(text, 0.25, {y:50,opacity:0,ease:Expo.easeIn})
-			.to(image, 0.35, {left:'100%', opacity:0,ease:Power3.easeIn,onComplete:function(){
+			.to(image, 0.35, {left:'50%', opacity:0,ease:Power3.easeIn,onComplete:function(){
 				if (right === true) {
 					$('.slide-wrap').slick('slickNext');
 				} else {
@@ -83,8 +83,14 @@ function initSlider() {
 
 		afterChangeTl
 			.staggerFromTo(text, 0.25, {y:50,opacity:0}, {y:0,opacity:1,ease:Expo.easeOut}, 0.1)
-			.fromTo(image, 0.35, {left:'100%',opacity:0}, {left:0,opacity:1,ease:Power3.easeOut}, '-=0.1')
+			.fromTo(image, 0.35, {left:'50%',opacity:0}, {left:0,opacity:1,ease:Power3.easeOut}, '-=0.1')
 			.play();
+	});
+
+	// Use tools-nav to navigate slider : 
+	$('body').on('click', '#tools-menu li', function(){
+		var target = $(this).index();
+		$('.slide-wrap').slick('slickGoTo', target);
 	});
 
 
