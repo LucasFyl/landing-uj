@@ -75,6 +75,8 @@ function initSlider() {
 	});
 	$('.slide-wrap').on('afterChange', function(event, slick, currentSlide){
 		var slide = $('.slide:eq('+currentSlide+')');
+		$('#tools-menu li').removeClass('active');
+		$('#tools-menu li:eq('+currentSlide+')').addClass('active');
 
 		image = slide.find('img');
 		text = slide.find('h4, p');
@@ -90,5 +92,15 @@ function initSlider() {
 	$('.slide-wrap').slick({
 		arrows: false,
 		fade: true
+		// asNavFor: '#tools-menu ul',
+		// slidesToShow: 1,
+		// slidesToScroll: 0
 	});
+	// $('#tools-menu ul').slick({
+	// 	slidesToShow: 8,
+	// 	slidesToScroll: 0,
+	// 	dots: false,
+	// 	arrows: false,
+	// 	asNavFor: '.slide-wrap'
+	// });
 }
