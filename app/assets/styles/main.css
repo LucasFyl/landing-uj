@@ -2883,6 +2883,15 @@ body button.small[type="submit"], body .md-dialog-container md-dialog button.sma
   min-width: 17.2rem;
   width: 17.2rem;
 }
+body .outer-title {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+body .outer-title span {
+  display: block;
+  transform: translateY(100%);
+}
 
 #scrolltop {
   height: 5rem;
@@ -2941,7 +2950,7 @@ header#landing-header nav ul {
 }
 header#landing-header nav ul li {
   width: 13rem;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #e6e6e6;
   text-align: center;
   height: 6.5rem;
   line-height: 6.5rem;
@@ -2959,8 +2968,7 @@ header#landing-header nav ul li a {
   transition: background 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 header#landing-header nav ul li a:hover {
-  text-decoration: underline;
-  background: #fafafa;
+  background: #fcfcfc;
 }
 
 #outer-wrap {
@@ -2968,7 +2976,6 @@ header#landing-header nav ul li a:hover {
   width: 100%;
   position: relative;
   z-index: 99;
-  padding-top: 6.5rem;
   margin-bottom: 82.1rem;
 }
 #outer-wrap section {
@@ -2989,9 +2996,12 @@ header#landing-header nav ul li a:hover {
   font-size: 5rem;
   font-family: "Baskerville MT Std", serif;
   margin-top: 0;
-  margin-bottom: 3.5rem;
+  margin-bottom: 0;
   line-height: 1;
   letter-spacing: .8rem;
+}
+#outer-wrap section h2.main:last-of-type {
+  margin-bottom: 3.5rem;
 }
 #outer-wrap section h2.main + p,
 #outer-wrap section hr + p {
@@ -3058,6 +3068,7 @@ header#landing-header nav ul li a:hover {
   max-width: 85rem;
 }
 #outer-wrap section.landing {
+  height: 100vh;
   background: url(../images/asset-landing.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -3073,6 +3084,22 @@ header#landing-header nav ul li a:hover {
   z-index: 2;
   background: rgba(0, 0, 0, 0.2);
   transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#outer-wrap section.landing.light:before {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: transparent;
+  transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#outer-wrap section.landing:before {
+  transition: all 3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 #outer-wrap section.landing .btn, #outer-wrap section.landing input[type="button"],
 #outer-wrap section.landing button[type="submit"], #outer-wrap section.landing .md-dialog-container md-dialog button:not([aria-label="Close"]), .md-dialog-container md-dialog #outer-wrap section.landing button:not([aria-label="Close"]) {

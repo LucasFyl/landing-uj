@@ -10,6 +10,15 @@ body {
 		min-width: 17.2rem;
 		width: 17.2rem;
 	}
+	.outer-title {
+		display: block; 
+		position: relative;
+		overflow: hidden;
+		span {
+			display: block;
+			@include transform(translateY(100%));
+		}
+	}
 }
 #scrolltop {
 	@include size(5rem);
@@ -55,7 +64,7 @@ header#landing-header {
 			list-style: none;
 			li {
 				width: 13rem;
-				border-left: 1px solid #ccc;
+				border-left: 1px solid darken(white, 10%);
 
 				text-align: center;
 				height: 6.5rem;
@@ -74,8 +83,7 @@ header#landing-header {
 					
 					@include transition(background 0.25s $ease-in-out-sine);
 					&:hover {
-						text-decoration: underline;
-						background: darken(white, 2%);
+						background: darken(white, 1%);
 					}
 				}
 			}
@@ -87,7 +95,7 @@ header#landing-header {
 	@include size(100%);
 	position: relative;
 	z-index: 99;
-	padding-top: 6.5rem;
+	// padding-top: 6.5rem;
 
 	// for fixed footer: 
     margin-bottom: 82.1rem;
@@ -113,9 +121,12 @@ header#landing-header {
 			font-family: $title-font;
 
 			margin-top: 0;
-			margin-bottom: 3.5rem;
+			margin-bottom: 0;
 			line-height: 1;
 			letter-spacing: .8rem;
+			&:last-of-type {
+				margin-bottom: 3.5rem;
+			}
 		}
 		h2.main + p,
 		hr + p {
@@ -163,10 +174,16 @@ header#landing-header {
 		
 	}
 	section.landing {
+		height: 100vh;
 	    background: url(../images/asset-landing.jpg) no-repeat center center;
 	    background-size: cover;
 	    @include overlay(rgba(0,0,0,0.2));
-
+		&.light {
+		    @include overlay(rgba(0,0,0,0.0));
+		}
+		&:before {
+	    	@include transition(all 3s $ease-in-out-sine);
+		}
 	    .btn {
 	    	margin-top: 6.5rem;
 			min-width: 16.2rem;
@@ -271,16 +288,6 @@ header#landing-header {
 					box-shadow: 0.75rem 0.75rem 5rem .3rem rgba(0,0,0,0.2);
 					@include center(vertical);
 					position: relative;
-					// @include levitable(4, 5);
-					// &:hover {
-					// 	@include transform(translateY(-50%));
-					// 	margin-top: -3px;
-					// }
-					// @include BoxShadowHelper(3);
-					// @include transition(box-shadow 0.5s $ease-in-out-sine);
-					// &:hover {
-					// 	box-shadow: 0.95rem 0.95rem 6rem .4rem rgba(0,0,0,0.17);
-					// }
 				}
 
 				// For animation : 

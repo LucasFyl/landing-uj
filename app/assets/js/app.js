@@ -1,7 +1,8 @@
+var controller = new ScrollMagic.Controller();
 
 $(document).ready(function(){
 
-	// $('body').addClass('locked');
+	// For loader animation : $('body').addClass('locked');
 	initPage();
 
 	$('#scrolltop').on('click', scrollTopFn);
@@ -13,6 +14,7 @@ function initPage(){
 	
 	setTimeout(initSlider, 200);
 	setTimeout(hideLoader, 250);
+	setTimeout(landingAnimation, 2250);
 
 	// if ( $('.isMobile').is(':visible') ) {
 	// }
@@ -21,7 +23,6 @@ function initPage(){
 function hideLoader() {
 	TweenMax.fromTo('#loader .center .logo', 1, {opacity:0}, {opacity:1,repeat:1, yoyo:true, ease:Power1.easeInOut});
 	TweenMax.to('#loader', 1, {opacity:0,display:'none',ease:Expo.easeOut,delay:2,onComplete:function(){
-		$('#overlay').hide();
 		$('body').removeClass('locked');
 	}});
 }
@@ -98,15 +99,44 @@ function initSlider() {
 	$('.slide-wrap').slick({
 		arrows: false,
 		fade: true
-		// asNavFor: '#tools-menu ul',
-		// slidesToShow: 1,
-		// slidesToScroll: 0
 	});
-	// $('#tools-menu ul').slick({
-	// 	slidesToShow: 8,
-	// 	slidesToScroll: 0,
-	// 	dots: false,
-	// 	arrows: false,
-	// 	asNavFor: '.slide-wrap'
-	// });
 }
+
+function landingAnimation() {
+	'use strict';
+
+	var landingTl = new TimelineMax();
+
+	landingTl
+		.set('header', {top:'-6.5rem'})
+		.set('.landing .outer-title span', {y:100})
+		.set('.landing p, .landing a', {opacity:'0'})
+		.set('#scrolltop', {bottom:'-10rem'})
+		.set('.landing', {className:'+=light'});
+
+	landingTl
+		.to('.landing', 1, {className:'-=light'}, "+=0.5")
+		.to('header', 0.75, {top:0, ease:Expo.easeOut})
+		.staggerTo('.landing .outer-title span', 0.75, {y:0, ease:Power2.easeInOut}, 0.1, "-=0.5")
+		.to('.landing p, .landing a', 0.5, {opacity:1}, "-=0.25");
+
+	landingTl.play();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
