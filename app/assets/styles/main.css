@@ -3108,6 +3108,28 @@ header#landing-header nav ul li a:hover {
   width: 16.2rem;
   letter-spacing: .15rem;
 }
+#outer-wrap section.landing p.scrolldown {
+  position: absolute;
+  bottom: 5rem;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+}
+#outer-wrap section.landing p.scrolldown:before {
+  content: " ";
+  height: 5rem;
+  width: 0.1rem;
+  background: white;
+  bottom: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: 9999;
+}
 #outer-wrap section.tools {
   height: auto;
   padding-top: 15rem;

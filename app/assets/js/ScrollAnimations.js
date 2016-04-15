@@ -27,6 +27,16 @@
 				triggerHook: 'onLeave'
 			}).setTween(scrollUpTween)
 			.addTo(controller);
+
+
+			// scrollDown disappear
+			var hideScrolldownTween = new TweenMax.to('.landing .scrolldown', 0.5, {opacity:0, ease:Power2.easeInOut});
+			var hideScrolldownScene = new ScrollMagic.Scene({
+				triggerElement: 'section:nth-child(2)',
+				triggerHook: 'onEnter',
+				offset: 30
+			}).setTween(hideScrolldownTween)
+			.addTo(controller);
 		}
 	}
 

@@ -190,7 +190,42 @@ header#landing-header {
 			width: 16.2rem;
 			letter-spacing: .15rem;
 	    }
+	    p.scrolldown {
+	    	position: absolute;
+	    	bottom: 5rem;
+	    	width: 100%;
+	    	max-width: 100%;
+
+	    	text-align: center;
+	    	color: white;
+	    	text-transform: uppercase;
+	    	letter-spacing: .25rem;
+
+			&:before {
+	    		content: " ";
+	    		@include size(.1rem 5rem);
+	    		background:white;
+
+	    		bottom: 0;
+	    		@include center(horizontal);
+	    		position: fixed;
+	    		z-index: 9999;
+	    	}
+	    }
 	}
+	// section.landing + section {
+
+	//     	&:before {
+	//     		content: " ";
+	//     		@include size(.1rem 7rem);
+	//     		background:white;
+
+	//     		top: -5rem;
+	//     		@include center(horizontal);
+	//     		position: absolute;
+	//     		z-index: 9999;
+	//     	}
+	// }
 	section.tools {
 		height: auto;
 		padding-top: 15rem;
