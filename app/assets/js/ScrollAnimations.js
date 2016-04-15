@@ -11,7 +11,7 @@
       		title.each(function(index, value){
       			var trigger = $(value).parent('section');
       			var theTitle = $(value).find('span');
-      			var titleTween = new TweenMax.to(theTitle, 0.5, {y:0,ease:Expo.easeOut});
+      			var titleTween = new TweenMax.to(theTitle, 1, {y:0,ease:Expo.easeOut});
 				var sectionTitle = new ScrollMagic.Scene({
 					triggerElement: value,
 					triggerHook: 'onEnter',

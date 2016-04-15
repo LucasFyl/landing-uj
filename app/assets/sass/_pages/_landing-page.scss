@@ -168,7 +168,7 @@ header#landing-header {
 		&:nth-child(8) {
 			background: url(../images/asset-bg-3.jpg) no-repeat center center;
 			background-size: cover;
-	    	@include overlay(rgba(0,0,0,0.2));
+	    	@include overlay(rgba(0,0,0,0.12));
 	    	p {max-width: 85rem;}
 		}
 		
@@ -177,7 +177,7 @@ header#landing-header {
 		height: 100vh;
 	    background: url(../images/asset-landing.jpg) no-repeat center center;
 	    background-size: cover;
-	    @include overlay(rgba(0,0,0,0.2));
+	    @include overlay(rgba(0,0,0,0.16));
 		&.light {
 		    @include overlay(rgba(0,0,0,0.0));
 		}
@@ -263,9 +263,10 @@ header#landing-header {
 				div.left {
 					padding: 0 12.5rem;
 
-					.center-block {
-						@include center(vertical);
-						padding-top: 10rem;
+					.slide-text {
+						max-width: 38%;
+						position: absolute;
+						bottom: 10rem;
 					}
 					h4 {
 						color: #587883;

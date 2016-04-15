@@ -3061,7 +3061,7 @@ header#landing-header nav ul li a:hover {
   right: 0;
   bottom: 0;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.12);
   transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 #outer-wrap section:nth-child(8) p {
@@ -3082,7 +3082,7 @@ header#landing-header nav ul li a:hover {
   right: 0;
   bottom: 0;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.16);
   transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 #outer-wrap section.landing.light:before {
@@ -3178,11 +3178,10 @@ header#landing-header nav ul li a:hover {
 #outer-wrap section.tools #tools-slider .slide div.left {
   padding: 0 12.5rem;
 }
-#outer-wrap section.tools #tools-slider .slide div.left .center-block {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-top: 10rem;
+#outer-wrap section.tools #tools-slider .slide div.left .slide-text {
+  max-width: 38%;
+  position: absolute;
+  bottom: 10rem;
 }
 #outer-wrap section.tools #tools-slider .slide div.left h4 {
   color: #587883;

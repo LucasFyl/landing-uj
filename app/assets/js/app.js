@@ -117,7 +117,7 @@ function landingAnimation() {
 	landingTl
 		.to('.landing', 1, {className:'-=light'}, "+=0.5")
 		.to('header', 0.75, {top:0, ease:Expo.easeOut})
-		.staggerTo('.landing .outer-title span', 0.75, {y:0, ease:Power2.easeInOut}, 0.1, "-=0.5")
+		.staggerTo('.landing .outer-title span', 1.3, {y:0, ease:Power2.easeInOut}, 0.1, "-=0.5")
 		.to('.landing p, .landing a', 0.5, {opacity:1}, "-=0.25");
 
 	landingTl.play();
