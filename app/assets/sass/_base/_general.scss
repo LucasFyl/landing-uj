@@ -27,6 +27,9 @@ html {
   @include media(min-width 1000px max-width 1350px) {
     font-size: 50%;
   }
+  @include media(min-width 600px max-width 1000px) {
+    font-size: 40%;
+  }
   // Small screen between 480px and 1000px
   @include media(min-width 480px max-width 600px) {
     font-size: 30%;

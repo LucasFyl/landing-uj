@@ -408,8 +408,11 @@ footer {
 			line-height: 2rem;
 			letter-spacing: .2rem;
 		}
-		.ck_email_field_group, .ck_subscribe_button {
-			width: 50%;
+		.ck_email_field_group {
+			min-width: 23rem;
+		}
+		.ck_subscribe_button {
+			 min-width: 27.5rem;
 		}
 		input.ck_email_address {
 		    width: 100%;
@@ -419,12 +422,12 @@ footer {
 			   text-transform: uppercase;
 			}
 
-			&:-moz-placeholder { /* Firefox 18- */
+			&:-moz-placeholder {
 			   text-align: right;
 			   text-transform: uppercase;
 			}
 
-			&::-moz-placeholder {  /* Firefox 19+ */
+			&::-moz-placeholder {
 			   text-align: right;
 			   text-transform: uppercase;
 			}

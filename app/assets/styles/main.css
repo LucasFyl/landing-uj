@@ -2386,6 +2386,11 @@ html {
     font-size: 50%;
   }
 }
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  html {
+    font-size: 40%;
+  }
+}
 @media screen and (min-width: 480px) and (max-width: 600px) {
   html {
     font-size: 30%;
@@ -3406,8 +3411,11 @@ footer .newsletter #ck_success_msg p {
   line-height: 2rem;
   letter-spacing: .2rem;
 }
-footer .newsletter .ck_email_field_group, footer .newsletter .ck_subscribe_button {
-  width: 50%;
+footer .newsletter .ck_email_field_group {
+  min-width: 23rem;
+}
+footer .newsletter .ck_subscribe_button {
+  min-width: 27.5rem;
 }
 footer .newsletter input.ck_email_address {
   width: 100%;
@@ -3417,12 +3425,10 @@ footer .newsletter input.ck_email_address::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 footer .newsletter input.ck_email_address:-moz-placeholder {
-  /* Firefox 18- */
   text-align: right;
   text-transform: uppercase;
 }
 footer .newsletter input.ck_email_address::-moz-placeholder {
-  /* Firefox 19+ */
   text-align: right;
   text-transform: uppercase;
 }
