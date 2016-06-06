@@ -1,5 +1,8 @@
 body {
 	$base-font: $book;
+
+	@include size(100%);
+	max-width: 100vw;
 	&.locked {
 		@include size(100%);
 		position: fixed;
@@ -93,9 +96,10 @@ header#landing-header {
 
 #outer-wrap {
 	@include size(100%);
+	max-width: 100vw;
+	overflow: hidden;
 	position: relative;
 	z-index: 99;
-	// padding-top: 6.5rem;
 
 	// for fixed footer: 
     margin-bottom: 82.1rem;
@@ -187,8 +191,8 @@ header#landing-header {
 	    .btn {
 	    	margin-top: 6.5rem;
 			min-width: 16.2rem;
-			width: 16.2rem;
-			letter-spacing: .15rem;
+			width: 20rem;
+			letter-spacing: .1rem;
 	    }
 	    p.scrolldown {
 	    	position: absolute;
@@ -210,6 +214,9 @@ header#landing-header {
 	    		@include center(horizontal);
 	    		position: fixed;
 	    		z-index: 9999;
+	    		@include media(max-width 1350px) {
+	    			width: .2rem;
+	    		}
 	    	}
 	    }
 	}
@@ -381,22 +388,70 @@ footer {
 			letter-spacing: .65rem;
 		}
 	}
-	p.newsletter {
+	.newsletter {
+		> div {width: 100%;}
 		margin: 0 auto 7.5rem;
 		text-align: center;
 		min-width: 67rem;
-		a {
-			@include underlined(transparent, #a6a6a6);
+
+		form {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+
+			margin: 0 auto;
+			max-width: 69rem;
 		}
-		a, input {
-			text-transform: uppercase;
+		#ck_success_msg p {
 			color: #a6a6a6;
 			font-size: 2rem;
 			line-height: 2rem;
 			letter-spacing: .2rem;
 		}
-		input {
+		.ck_email_field_group, .ck_subscribe_button {
+			width: 50%;
+		}
+		input.ck_email_address {
+		    width: 100%;
+    		
+    		&::-webkit-input-placeholder {
+			   text-align: right;
+			   text-transform: uppercase;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			   text-align: right;
+			   text-transform: uppercase;
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   text-align: right;
+			   text-transform: uppercase;
+			}
+
+			&:-ms-input-placeholder {  
+			   text-align: right;
+			   text-transform: uppercase;
+			}
+		}
+		a, input, label {
+			color: #a6a6a6;
+			font-size: 2rem;
+			line-height: 2rem;
+			letter-spacing: .2rem;
+		}
+		button {
 			font-family: $heavy;
+		    margin-top: -0.2rem;
+		    border: none;
+		    padding: 0;
+
+			text-transform: uppercase;
+			color: #a6a6a6;
+			font-size: 2rem;
+			line-height: 2rem;
+			letter-spacing: .2rem;
+			@include underlined(transparent, #a6a6a6);
 		}
 	}
 
@@ -489,21 +544,12 @@ footer {
 		}
 	}
 
-	nav.footer-links {
-		p, a {
-			font-family: $book;
-			font-size: 1.3rem;
-			color: #959595;
-			text-decoration: none;
-			margin: 0;
-		}
-		a {
-			@include underlined(transparent, #959595);
-		}
-
-		width: 56rem;
+	> p:last-child {
+		text-align: center;
+		font-family: $book;
+		font-size: 1.3rem;
+		color: #959595;
+		text-decoration: none;
 		margin: 5rem auto;
-		display: flex;
-		justify-content: space-between;
 	}
 }

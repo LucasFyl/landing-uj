@@ -37,6 +37,18 @@
 				offset: 30
 			}).setTween(hideScrolldownTween)
 			.addTo(controller);
+
+			// Visual movement on scroll
+			// var visualMvmtDuration = $('.visual-mvmt').height();
+			// var visualMvmtTween = new TweenMax.fromTo('.visual-mvmt', 1, {backgroundPositionY:'10%'}, {backgroundPositionY:'60%', ease:Power1.easeOut});
+			// var visualMvmtScene = new ScrollMagic.Scene({
+			// 	triggerElement: '.visual-mvmt',
+			// 	triggerHook: 'onEnter',
+			// 	duration: visualMvmtDuration
+			// }).setTween(visualMvmtTween)
+			// .addTo(controller);
+				
+			
 		}
 	}
 

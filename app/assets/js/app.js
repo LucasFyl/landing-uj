@@ -97,6 +97,7 @@ function initSlider() {
 
 	// Init slider
 	$('.slide-wrap').slick({
+		slideToShow: 1,
 		arrows: false,
 		fade: true
 	});
