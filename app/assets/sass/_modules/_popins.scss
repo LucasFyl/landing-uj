@@ -3,7 +3,7 @@
 	position: fixed;
 	background:rgba(0,0,0,0.3);
 	left: 0;top: 0;bottom: 0;right: 0;
-	z-index: 9999;
+	z-index: 9998;
 
 	.modal-inner {
 		@include size(70vw 70vh);
