@@ -1132,10 +1132,10 @@ ul.no-bullet {
 .light-btn:hover span.hidden:before, .custom-file-upload:hover span.hidden:before {
   opacity: 1;
 }
-.light-btn.no-padd:hover span.hidden, .no-padd.custom-file-upload:hover span.hidden, md-dialog#document-storage-modal .light-btn:hover span.hidden, md-dialog#document-storage-modal .custom-file-upload:hover span.hidden {
+.light-btn.no-padd:hover span.hidden, .no-padd.custom-file-upload:hover span.hidden {
   padding-left: 0;
 }
-.light-btn.no-padd:hover span.hidden:before, .no-padd.custom-file-upload:hover span.hidden:before, md-dialog#document-storage-modal .light-btn:hover span.hidden:before, md-dialog#document-storage-modal .custom-file-upload:hover span.hidden:before {
+.light-btn.no-padd:hover span.hidden:before, .no-padd.custom-file-upload:hover span.hidden:before {
   left: 5%;
 }
 .light-btn.btn-block, .btn-block.custom-file-upload {
@@ -1146,7 +1146,7 @@ ul.no-bullet {
 
 /*  ----   B A S E  B T N  */
 .btn, input[type="button"],
-button[type="submit"], .md-dialog-container md-dialog button:not([aria-label="Close"]) {
+button[type="submit"] {
   display: inline-block;
   min-width: 28rem;
   line-height: 4.3rem;
@@ -1161,53 +1161,53 @@ button[type="submit"], .md-dialog-container md-dialog button:not([aria-label="Cl
   transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .btn:hover, input[type="button"]:hover,
-button[type="submit"]:hover, .md-dialog-container md-dialog button:hover:not([aria-label="Close"]) {
+button[type="submit"]:hover {
   transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background: #597981;
   color: white;
 }
 .btn:active, input[type="button"]:active,
-button[type="submit"]:active, .md-dialog-container md-dialog button:active:not([aria-label="Close"]) {
+button[type="submit"]:active {
   box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.5);
 }
 .btn.white, input.white[type="button"],
-button.white[type="submit"], .md-dialog-container md-dialog button.white:not([aria-label="Close"]) {
+button.white[type="submit"] {
   background: transparent;
   border-color: white;
   color: white;
 }
 .btn.white:hover, input.white[type="button"]:hover,
-button.white[type="submit"]:hover, .md-dialog-container md-dialog button.white:hover:not([aria-label="Close"]) {
+button.white[type="submit"]:hover {
   background: white;
   color: black;
 }
 .btn.light-white, input.light-white[type="button"],
-button.light-white[type="submit"], .md-dialog-container md-dialog button.light-white:not([aria-label="Close"]) {
+button.light-white[type="submit"] {
   background: transparent;
   border-color: rgba(255, 255, 255, 0.5);
   color: white;
 }
 .btn.light-white:hover, input.light-white[type="button"]:hover,
-button.light-white[type="submit"]:hover, .md-dialog-container md-dialog button.light-white:hover:not([aria-label="Close"]) {
+button.light-white[type="submit"]:hover {
   border-color: white;
   background: rgba(0, 0, 0, 0.1);
 }
 .btn.btn-block, input.btn-block[type="button"],
-button.btn-block[type="submit"], .md-dialog-container md-dialog button.btn-block:not([aria-label="Close"]) {
+button.btn-block[type="submit"] {
   display: block;
   width: 24.5rem;
   margin: 0 auto;
 }
 .btn.btn-block.small, input.btn-block.small[type="button"],
-button.btn-block.small[type="submit"], .md-dialog-container md-dialog button.btn-block.small:not([aria-label="Close"]) {
+button.btn-block.small[type="submit"] {
   width: 15rem;
 }
 .btn.btn-block.long, input.btn-block.long[type="button"],
-button.btn-block.long[type="submit"], .md-dialog-container md-dialog button.btn-block.long:not([aria-label="Close"]) {
+button.btn-block.long[type="submit"] {
   width: 30rem;
 }
 .btn.btn-inline, input.btn-inline[type="button"],
-button.btn-inline[type="submit"], .md-dialog-container md-dialog button.btn-inline:not([aria-label="Close"]) {
+button.btn-inline[type="submit"] {
   display: inline-block;
   padding: 0;
   margin: 1rem 0;
@@ -1216,12 +1216,12 @@ button.btn-inline[type="submit"], .md-dialog-container md-dialog button.btn-inli
   color: #8a8a8a;
 }
 .btn.btn-inline > span, input.btn-inline[type="button"] > span,
-button.btn-inline[type="submit"] > span, .md-dialog-container md-dialog button.btn-inline:not([aria-label="Close"]) > span {
+button.btn-inline[type="submit"] > span {
   position: relative;
   display: inline-block;
 }
 .btn.btn-inline > span:after, input.btn-inline[type="button"] > span:after,
-button.btn-inline[type="submit"] > span:after, .md-dialog-container md-dialog button.btn-inline:not([aria-label="Close"]) > span:after {
+button.btn-inline[type="submit"] > span:after {
   content: " ";
   height: 1px;
   width: 100%;
@@ -1233,17 +1233,17 @@ button.btn-inline[type="submit"] > span:after, .md-dialog-container md-dialog bu
   transition: background-color 0.25s ease;
 }
 .btn.btn-inline:hover > span::after, input.btn-inline[type="button"]:hover > span::after,
-button.btn-inline[type="submit"]:hover > span::after, .md-dialog-container md-dialog button.btn-inline:hover:not([aria-label="Close"]) > span::after {
+button.btn-inline[type="submit"]:hover > span::after {
   background-color: #5f5f5f;
   transition: background-color 0.25s ease;
 }
 .btn.btn-inline:hover, input.btn-inline[type="button"]:hover,
-button.btn-inline[type="submit"]:hover, .md-dialog-container md-dialog button.btn-inline:hover:not([aria-label="Close"]) {
+button.btn-inline[type="submit"]:hover {
   background: transparent;
   color: #5f5f5f;
 }
 .btn.thin, input.thin[type="button"],
-button.thin[type="submit"], .md-dialog-container md-dialog button.thin:not([aria-label="Close"]) {
+button.thin[type="submit"] {
   line-height: 4.2rem;
   height: 4.2rem;
 }
@@ -1255,7 +1255,7 @@ button.thin[type="submit"], .md-dialog-container md-dialog button.thin:not([aria
   justify-content: space-between;
 }
 .boolean-btn-wrap .btn, .boolean-btn-wrap input[type="button"],
-.boolean-btn-wrap button[type="submit"], .boolean-btn-wrap .md-dialog-container md-dialog button:not([aria-label="Close"]), .md-dialog-container md-dialog .boolean-btn-wrap button:not([aria-label="Close"]) {
+.boolean-btn-wrap button[type="submit"] {
   height: 3.5rem;
   width: 9rem;
   line-height: 3rem;
@@ -1267,7 +1267,7 @@ button.thin[type="submit"], .md-dialog-container md-dialog button.thin:not([aria
   text-transform: none;
 }
 .boolean-btn-wrap .btn:hover, .boolean-btn-wrap input[type="button"]:hover,
-.boolean-btn-wrap button[type="submit"]:hover, .boolean-btn-wrap .md-dialog-container md-dialog button:hover:not([aria-label="Close"]), .md-dialog-container md-dialog .boolean-btn-wrap button:hover:not([aria-label="Close"]) {
+.boolean-btn-wrap button[type="submit"]:hover {
   border-color: #597981;
   color: white;
 }
@@ -2540,190 +2540,111 @@ header > .top .logo::after {
   display: table;
 }
 
-.md-dialog-container md-dialog {
-  height: 27rem;
-  width: 72rem;
-  position: relative;
-  border-radius: 0;
-  overflow: visible;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.md-dialog-container md-dialog form {
-  width: 50%;
+.modal-outer {
   height: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
 }
-.md-dialog-container md-dialog md-dialog-content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.md-dialog-container md-dialog md-dialog-content .md-dialog-content {
-  padding: 0;
-}
-.md-dialog-container md-dialog md-dialog-content p {
-  margin-top: 0;
-  margin-bottom: 2.5rem;
-  font-size: 1.7rem;
-  font-family: "Baskerville MT Std", serif;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-  text-align: center;
-  color: #818f98;
-}
-.md-dialog-container md-dialog md-dialog-content input {
-  max-width: 25rem;
-  margin: 0 auto;
-  float: none;
-  letter-spacing: 0.05rem;
-  text-align: center;
-}
-.md-dialog-container md-dialog md-dialog-actions {
-  padding: 0;
-  flex-flow: column wrap;
-}
-.md-dialog-container md-dialog button:not([aria-label="Close"]) {
-  min-width: 20rem;
-}
-.md-dialog-container md-dialog button[aria-label="Close"], .md-dialog-container md-dialog button.close-btn {
+.modal-outer .modal-inner {
+  height: 70vh;
+  width: 70vw;
+  min-height: 280px;
+  background: white;
   position: absolute;
-  top: -2rem;
-  right: -2rem;
-  height: 4rem;
-  width: 4rem;
-  min-width: 4rem;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  display: block;
-  text-indent: -9999px;
-  border: none;
-  background: url("../assets/images/asset-icon-close.png") no-repeat center center;
-  background-color: #597981 !important;
-  background-size: 1.8rem;
-}
-.md-dialog-container md-dialog button[aria-label="Close"]:hover, .md-dialog-container md-dialog button.close-btn:hover {
-  background: url("../assets/images/asset-icon-close.png") no-repeat center center;
-  background-color: #597981;
-  background-size: 1.8rem;
-}
-
-md-dialog#manage-categories-modal {
-  min-height: 42rem;
-  padding: 3.5rem 0;
-}
-md-dialog#manage-categories-modal > p.title {
-  line-height: 6rem;
-  font-size: 1.7rem;
-  font-family: "Baskerville MT Std", serif;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-  text-align: center;
-  color: #818f98;
-}
-md-dialog#manage-categories-modal md-dialog-content, md-dialog#manage-categories-modal .md-dialog-content {
-  height: 28rem;
-  position: static;
-  transform: none;
-}
-md-dialog#manage-categories-modal md-list-item {
-  height: 3.5rem;
-  line-height: 3.5rem;
-  min-height: 3.5rem;
-  max-height: 3.5rem;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
   display: flex;
 }
-md-dialog#manage-categories-modal md-list-item p {
-  text-align: left;
-  color: #8a8a8a;
-  font-family: "FuturaStdMedium", sans-serif;
-  font-size: 1.3rem;
-  text-transform: none;
-  margin: 0;
+.modal-outer .modal-inner .image {
+  overflow: hidden;
+  min-height: 100%;
+  width: 43%;
+  background: url(../images/asset-popup.jpg) no-repeat center top;
+  background-size: cover;
 }
-md-dialog#manage-categories-modal md-list-item input {
-  width: 100%;
-  text-align: left;
-  padding: 0;
-  margin: 0;
+.modal-outer .modal-inner .modal-content {
+  width: 57%;
+  height: 100%;
+  position: relative;
+  padding-left: 3rem;
 }
-md-dialog#manage-categories-modal md-list-item .actions {
-  margin-left: auto;
+.modal-outer .modal-inner .modal-content .close-modal {
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  top: 3rem;
+  right: 3rem;
+  background: url(../images/asset-close-popup.png) no-repeat center center;
+  background-size: 2.15rem;
 }
-
-.confirm-popin {
-  height: 31.6rem;
-  width: 55.6rem;
-  padding: 7rem 7rem 6.5rem;
-  margin: 0 auto;
-  text-align: center;
+.modal-outer .modal-inner .ck_form.ck_minimal {
+  background: transparent;
+  border: none;
 }
-.confirm-popin h2 {
-  font-size: 1.7rem;
-  color: #818f97;
+.modal-outer .modal-inner .ck_form_fields {
+  /* input */
+  /* button */
+}
+.modal-outer .modal-inner .ck_form_fields h3, .modal-outer .modal-inner .ck_form_fields p {
+  text-align: left !important;
+  line-height: 1;
+}
+.modal-outer .modal-inner .ck_form_fields h3 {
+  font-size: 4rem !important;
+  text-transform: uppercase;
+  color: #aeaead;
+  letter-spacing: .3rem;
   margin-top: 0;
+  margin-bottom: 4rem !important;
+}
+.modal-outer .modal-inner .ck_form_fields p {
+  font-family: "FuturaStdBook", sans-serif;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  margin: 0;
+  letter-spacing: .1rem;
+}
+.modal-outer .modal-inner .ck_form_fields .ck_description p:last-child {
   margin-bottom: 4rem;
 }
-.confirm-popin p {
-  font-family: "FuturaStdBook", sans-serif;
-  margin-top: 0;
-  padding: 0 3rem;
-}
-.confirm-popin p:last-of-type {
-  margin-bottom: 3.5rem;
-}
-
-md-dialog#document-storage-modal {
-  height: 45rem;
-}
-md-dialog#document-storage-modal form {
-  max-width: 22rem;
-  margin: 0 auto;
-}
-md-dialog#document-storage-modal form .formly-field input {
-  text-align: left;
-}
-md-dialog#document-storage-modal form .formly-field {
-  overflow: auto;
-}
-md-dialog#document-storage-modal form textarea {
-  height: 9rem !important;
-  min-height: 9rem;
-  max-height: 11rem;
-  resize: none;
-  overflow: auto !important;
-  overflow-y: scroll;
-}
-md-dialog#document-storage-modal .light-btn, md-dialog#document-storage-modal .custom-file-upload {
-  max-width: 13rem;
-  display: block;
-  margin: 5rem auto 0;
-  line-height: 3.25rem;
-}
-
-#admin-prompt-modal {
-  height: 47rem;
-}
-#admin-prompt-modal .md-dialog-content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-#admin-prompt-modal md-dialog-actions {
+.modal-outer .modal-inner .ck_form_fields #ck_subscribe_form .ck_guarantee {
   display: none;
 }
-#admin-prompt-modal .btn, #admin-prompt-modal input[type="button"],
-#admin-prompt-modal button[type="submit"], #admin-prompt-modal .md-dialog-container md-dialog button:not([aria-label="Close"]), .md-dialog-container md-dialog #admin-prompt-modal button:not([aria-label="Close"]) {
-  margin-top: 5rem;
+.modal-outer .modal-inner .ck_form_fields form {
+  display: flex;
 }
-#admin-prompt-modal .dialogs {
-  margin: 2rem 0;
+.modal-outer .modal-inner .ck_form_fields .ck_email_address {
+  width: 100%;
+  height: 6rem;
+  line-height: 6rem;
+  border-bottom-left-radius: 3rem;
+  border-top-left-radius: 3rem;
+  padding-left: 5rem;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-#admin-prompt-modal .dialogs p {
-  text-transform: none;
-  color: #5f5f5f;
-  font-family: "FuturaStdBook", sans-serif;
-  font-size: 1.3rem;
-  letter-spacing: .1rem;
+.modal-outer .modal-inner .ck_form_fields .ck_subscribe_button {
+  min-width: 0;
+  width: 12rem !important;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  border-bottom-right-radius: 3rem;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  height: 6rem;
+  padding: 0;
+  background: #597981;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 #tools-menu {
@@ -2987,7 +2908,7 @@ body.locked {
   overflow: hidden;
 }
 body .btn.small, body input.small[type="button"],
-body button.small[type="submit"], body .md-dialog-container md-dialog button.small:not([aria-label="Close"]), .md-dialog-container md-dialog body button.small:not([aria-label="Close"]) {
+body button.small[type="submit"] {
   margin-top: 4.5rem;
   min-width: 17.2rem;
   width: 17.2rem;
@@ -3213,7 +3134,7 @@ header#landing-header nav ul li a:hover {
   transition: all 3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 #outer-wrap section.landing .btn, #outer-wrap section.landing input[type="button"],
-#outer-wrap section.landing button[type="submit"], #outer-wrap section.landing .md-dialog-container md-dialog button:not([aria-label="Close"]), .md-dialog-container md-dialog #outer-wrap section.landing button:not([aria-label="Close"]) {
+#outer-wrap section.landing button[type="submit"] {
   margin-top: 6.5rem;
   min-width: 16.2rem;
   width: 20rem;

@@ -5,6 +5,8 @@ $(document).ready(function(){
 	// For loader animation : $('body').addClass('locked');
 	initPage();
 
+	Modal.init();
+
 	$('#scrolltop').on('click', scrollTopFn);
 
 });
