@@ -159,6 +159,9 @@ header#landing-header {
 		@include media($mobile) {
 			.center-block p {
 				max-width: 300px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 			
@@ -297,97 +300,6 @@ header#landing-header {
 				@include media($mobile) {
 					max-width: 90% !important;
 					font-size: 18px;
-				}
-			}
-		}
-
-		#tools-menu {
-			position: relative;
-			width: 100%;
-		    margin: 0;
-		    border-bottom: 1px solid #cccccc;
-		    overflow-y: hidden;
-		    padding-top: 5rem;
-		    height: 10rem;
-		    li {
-		    	cursor: pointer;
-		    }
-		}
-
-		.arrows {
-			@include size(6.8rem 3rem);
-			display: flex;
-			margin-bottom: 7rem;
-
-			position: absolute;
-			z-index: 999;
-			left:12.5rem; top: 18rem;
-
-			a {
-				display: block; 
-				width: 50%;
-
-				&.left {
-					background:url('../images/asset-icon-caret-left.png') no-repeat left center;
-					background-size: 1.35rem 2.25rem;
-				}
-				&.right {
-					background:url('../images/asset-icon-caret-right.png') no-repeat right center;
-					background-size: 1.35rem 2.25rem;
-				}
-
-			}
-		}
-		#tools-slider {
-			position: relative;
-
-			.slide {
-				@include size(100vw 65.5rem);
-				padding-top: 10rem;
-				padding-bottom: 10rem;
-				display: flex;
-				overflow-x:hidden;
-				overflow-y:visible;
-				> div {
-					height: 100%;
-					width: 50%;
-					flex-grow:1;
-				}
-
-				div.left {
-					padding: 0 12.5rem;
-
-					.slide-text {
-						max-width: 38%;
-						position: absolute;
-						bottom: 10rem;
-					}
-					h4 {
-						color: #587883;
-						font-size: 1.8rem;
-						font-family: $base-font;
-						letter-spacing: .3rem;
-						margin-bottom: 4.5rem;
-						text-align: left;
-					}
-					p {
-						font-family: $book;
-						font-size: 3rem;
-						color: #8a8a8a;
-						text-align: left;
-					}
-
-					
-				}
-				.right img {
-					box-shadow: 0.75rem 0.75rem 5rem .3rem rgba(0,0,0,0.2);
-					@include center(vertical);
-					position: relative;
-				}
-
-				// For animation : 
-				p, h4, img {
-					opacity: 0;
 				}
 			}
 		}

@@ -102,7 +102,16 @@ function initSlider() {
 	$('.slide-wrap').slick({
 		slideToShow: 1,
 		arrows: false,
-		fade: true
+		fade: true,
+		responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        slidesToShow: 1,
+		        infinite: true,
+		      }
+		    }
+	    ]
 	});
 }
 

@@ -1,14 +1,28 @@
 #tools-menu {
-  width: calc(100% - 10rem);
-  height: 5rem;
-  position: fixed;
-  z-index: 9999;
+  z-index: 9988;
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  margin: 0;
   bottom: 0;
   left: 0;
 
   background: white;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  overflow-y:hidden; 
+
+  border-bottom: 1px solid #cccccc;
+  padding-top: 5rem;
+
+  li {
+    cursor: pointer;
+  }
+
+  @include media($isMobile) {
+    height: auto !important;
+    border-bottom: none !important;
+    padding-top: 0;
+    overflow-y: visible;
+  }
 
   ul {
     list-style: none;
@@ -33,6 +47,15 @@
       overflow: hidden;
       @include transition(all 0s);
       @include transition-delay(0.5s);
+
+      @include media($isMobile) {
+        display: none;
+        &.active {
+          display: block;
+          width: 100vw;
+          height: 6rem;
+        }
+      }
 
 
       a {
@@ -116,6 +139,15 @@
       &.active a {
         box-shadow: inset 0px -2px 0px 0px #587982;
         box-sizing: content-box;
+
+
+        @include media($isMobile) {
+          margin: 0 auto;
+          @include size(5.3rem);
+          @include BoxShadowHelper(1);
+          border-radius: 100%;
+          background:white;
+        }
       }
 
 
@@ -247,6 +279,125 @@
         }
       }
 
+    }
+  }
+}
+
+.arrows {
+  @include size(6.8rem 3rem);
+  display: flex;
+  margin-bottom: 7rem;
+
+  position: absolute;
+  z-index: 999;
+  left:12.5rem; top: 18rem;
+
+  a {
+    display: block; 
+    width: 50%;
+
+    &.left {
+      background:url('../images/asset-icon-caret-left.png') no-repeat left center;
+      background-size: 1.35rem 2.25rem;
+    }
+    &.right {
+      background:url('../images/asset-icon-caret-right.png') no-repeat right center;
+      background-size: 1.35rem 2.25rem;
+    }
+  }
+  @include media($isMobile) {
+    width: 60%;
+    left: 20%;
+    top: -5rem;
+    margin-bottom: 0;
+    z-index: 9999;
+  }
+}
+
+#tools-slider {
+  position: relative;
+
+  .slide {
+    @include size(100vw 65.5rem);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    display: flex;
+    overflow-x:hidden;
+    overflow-y:visible;
+    @include media($isMobile) {
+      height: auto;
+      padding: 0;
+      flex-flow: column;
+    }
+
+    > div {
+      height: 100%;
+      width: 50%;
+      flex-grow:1;
+
+      @include media($isMobile) {
+        width: 100%;
+      }
+    }
+
+    div.left {
+      padding: 0 12.5rem;
+
+      .slide-text {
+        max-width: 38%;
+        position: absolute;
+        bottom: 10rem;
+      }
+      h4 {
+        color: #587883;
+        font-size: 1.8rem;
+        font-family: $base-font;
+        letter-spacing: .3rem;
+        margin-bottom: 4.5rem;
+        text-align: left;
+      }
+      p {
+        font-family: $book;
+        font-size: 3rem;
+        color: #8a8a8a;
+        text-align: left;
+      }
+
+      @include media($isMobile) {
+        padding: 0;
+        .slide-text {
+          position: static;
+          width: 100%;
+          max-width: 100%;
+          padding: 0 3rem;
+        }
+        h4 {
+          font-size: 2rem;
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.7rem;
+          text-align: center;
+        }
+      }
+
+      
+    }
+    .right img {
+      box-shadow: 0.75rem 0.75rem 5rem .3rem rgba(0,0,0,0.2);
+      position: relative;
+      margin: 5rem 0;
+      margin-left: 3rem;
+      @include media($medium) {
+        margin: 0;
+        @include center(vertical);
+      }
+    }
+
+    // For animation : 
+    p, h4, img {
+      opacity: 0;
     }
   }
 }
