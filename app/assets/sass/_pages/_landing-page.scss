@@ -351,12 +351,24 @@ footer {
 			margin: 0 auto 17rem;
 			letter-spacing: .65rem;
 		}
+		@include media($isMobile) {
+			padding-top: 0;
+			h4 {
+				margin: 11rem 0;
+				letter-spacing: .45rem;
+				font-size: 2.4rem;
+			}
+		}
 	}
 	.newsletter {
 		> div {width: 100%;}
 		margin: 0 auto 7.5rem;
 		text-align: center;
 		min-width: 67rem;
+
+		@include media($isMobile) {
+			display: none;
+		}
 
 		form {
 			display: flex;
@@ -423,16 +435,26 @@ footer {
 	}
 
 	section.links {
+		display: flex;
 		border-top: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
 
-		display: flex;
-		> div {
-			width: 50%;
-			padding: 8rem 0;
+		@include media($isMobile) {
+			border: none;
+			flex-flow: column;
 		}
+
+		@include media($medium) {
+			> div {
+				width: 50%;
+				padding: 8rem 0;
+			}
+		}
+
 		.social {
-			border-right: 1px solid #ccc;
+			@include media($medium) {
+				border-right: 1px solid #ccc;
+			}
 
 			ul {
 				padding: 0;margin: 0 auto;
@@ -507,7 +529,21 @@ footer {
 					background:url('../images/asset-icon-email.png') no-repeat left center;
 					background-size: 2rem 1.75rem;
 				}
+
+				@include media($isMobile) {
+					padding-left: 0;
+					border: 1px solid #d2d2d2;
+					line-height: 7.8rem;
+					height: 7.8rem;
+					font-size: 1.6rem;
+					margin: 5rem auto;
+
+					.icon {
+						display: none;
+					}
+				}
 			}
+
 		}
 	}
 
@@ -518,5 +554,8 @@ footer {
 		color: #959595;
 		text-decoration: none;
 		margin: 5rem auto;
+		@include media($isMobile) {
+			margin-bottom: 10rem;
+		}
 	}
 }

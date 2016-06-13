@@ -3448,6 +3448,16 @@ footer .logo-block h4 {
   margin: 0 auto 17rem;
   letter-spacing: .65rem;
 }
+@media screen and (max-width: 768px) {
+  footer .logo-block {
+    padding-top: 0;
+  }
+  footer .logo-block h4 {
+    margin: 11rem 0;
+    letter-spacing: .45rem;
+    font-size: 2.4rem;
+  }
+}
 footer .newsletter {
   margin: 0 auto 7.5rem;
   text-align: center;
@@ -3455,6 +3465,11 @@ footer .newsletter {
 }
 footer .newsletter > div {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  footer .newsletter {
+    display: none;
+  }
 }
 footer .newsletter form {
   display: flex;
@@ -3531,16 +3546,26 @@ footer .newsletter button:hover > span::after {
   transition: background-color 0.25s ease;
 }
 footer section.links {
+  display: flex;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  display: flex;
 }
-footer section.links > div {
-  width: 50%;
-  padding: 8rem 0;
+@media screen and (max-width: 768px) {
+  footer section.links {
+    border: none;
+    flex-flow: column;
+  }
 }
-footer section.links .social {
-  border-right: 1px solid #ccc;
+@media screen and (min-width: 768px) {
+  footer section.links > div {
+    width: 50%;
+    padding: 8rem 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer section.links .social {
+    border-right: 1px solid #ccc;
+  }
 }
 footer section.links .social ul {
   padding: 0;
@@ -3624,6 +3649,19 @@ footer section.links .email a .icon {
   background: url("../images/asset-icon-email.png") no-repeat left center;
   background-size: 2rem 1.75rem;
 }
+@media screen and (max-width: 768px) {
+  footer section.links .email a {
+    padding-left: 0;
+    border: 1px solid #d2d2d2;
+    line-height: 7.8rem;
+    height: 7.8rem;
+    font-size: 1.6rem;
+    margin: 5rem auto;
+  }
+  footer section.links .email a .icon {
+    display: none;
+  }
+}
 footer > p:last-child {
   text-align: center;
   font-family: "FuturaStdBook", sans-serif;
@@ -3631,4 +3669,9 @@ footer > p:last-child {
   color: #959595;
   text-decoration: none;
   margin: 5rem auto;
+}
+@media screen and (max-width: 768px) {
+  footer > p:last-child {
+    margin-bottom: 10rem;
+  }
 }
