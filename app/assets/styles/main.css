@@ -2646,6 +2646,10 @@ header > .top .logo::after {
   background: #597981;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+.modal-outer .modal-inner .ck_form_fields .ck_success_msg {
+  border: none;
+  background: transparent;
+}
 
 #tools-menu {
   z-index: 9988;
@@ -3113,6 +3117,29 @@ header#landing-header {
   right: 0;
   width: 100%;
 }
+@media screen and (max-width: 480px) {
+  header#landing-header {
+    overflow: visible;
+    border-bottom: 1px solid #959595;
+  }
+  header#landing-header:after {
+    content: " ";
+    height: 6.5rem;
+    width: 6.5rem;
+    border-left: 1px solid #cccdcd;
+    position: absolute;
+    right: 0;
+    background: url("../images/asset-icon-menu.png") no-repeat center center;
+    background-size: 1.5rem;
+  }
+  header#landing-header.open:after {
+    background: url("../images/asset-icon-menu-close.png") no-repeat center center;
+    background-size: 1.5rem;
+  }
+  header#landing-header.open nav {
+    height: auto;
+  }
+}
 header#landing-header h1.logo {
   position: relative;
   left: 50%;
@@ -3126,11 +3153,26 @@ header#landing-header nav {
   right: 0;
   top: 0;
 }
+@media screen and (max-width: 480px) {
+  header#landing-header nav {
+    width: 100vw;
+    top: 6.5rem;
+    background: white;
+    height: 0;
+    overflow: hidden;
+  }
+}
 header#landing-header nav ul {
   padding: 0;
   margin: 0;
   display: flex;
   list-style: none;
+}
+@media screen and (max-width: 480px) {
+  header#landing-header nav ul {
+    width: 100vw;
+    flex-flow: column;
+  }
 }
 header#landing-header nav ul li {
   width: 13rem;
@@ -3138,6 +3180,14 @@ header#landing-header nav ul li {
   text-align: center;
   height: 6.5rem;
   line-height: 6.5rem;
+}
+@media screen and (max-width: 480px) {
+  header#landing-header nav ul li {
+    width: 100%;
+  }
+  header#landing-header nav ul li:last-child {
+    display: none;
+  }
 }
 header#landing-header nav ul li a {
   height: 100%;
@@ -3210,8 +3260,9 @@ header#landing-header nav ul li a:hover {
   #outer-wrap section h2.main + p,
   #outer-wrap section hr + p {
     font-size: 20px;
-    max-width: 90%;
+    max-width: 85%;
     margin: 0 auto;
+    line-height: 1.5;
   }
 }
 #outer-wrap section hr {
@@ -3283,6 +3334,22 @@ header#landing-header nav ul li a:hover {
 }
 #outer-wrap section.price {
   background: #9cafae;
+}
+@media screen and (max-width: 768px) {
+  #outer-wrap section.price {
+    background: #9cafae url(../images/asset-bg-pricebox-mobile.png) no-repeat center center;
+    background-size: 50%;
+  }
+  #outer-wrap section.price p {
+    font-size: 1.8rem !important;
+    line-height: 1.7 !important;
+  }
+  #outer-wrap section.price p.big {
+    font-size: 6.5rem !important;
+  }
+  #outer-wrap section.price .tilt {
+    display: none;
+  }
 }
 #outer-wrap section:nth-child(8) {
   background: url(../images/asset-bg-3.jpg) no-repeat center center;
@@ -3448,7 +3515,7 @@ footer .logo-block h4 {
   margin: 0 auto 17rem;
   letter-spacing: .65rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   footer .logo-block {
     padding-top: 0;
   }
@@ -3466,7 +3533,7 @@ footer .newsletter {
 footer .newsletter > div {
   width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   footer .newsletter {
     display: none;
   }
@@ -3550,7 +3617,7 @@ footer section.links {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   footer section.links {
     border: none;
     flex-flow: column;
@@ -3649,7 +3716,7 @@ footer section.links .email a .icon {
   background: url("../images/asset-icon-email.png") no-repeat left center;
   background-size: 2rem 1.75rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   footer section.links .email a {
     padding-left: 0;
     border: 1px solid #d2d2d2;
@@ -3670,7 +3737,7 @@ footer > p:last-child {
   text-decoration: none;
   margin: 5rem auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   footer > p:last-child {
     margin-bottom: 10rem;
   }

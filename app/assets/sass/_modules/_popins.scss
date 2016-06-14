@@ -101,6 +101,10 @@
 				background:$brand-main;
 				@include BoxShadowHelper(1);
 			}
+			.ck_success_msg {
+				border: none;
+				background:transparent;
+			}
 		}
 			
 	}

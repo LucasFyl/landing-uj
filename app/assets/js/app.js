@@ -12,18 +12,23 @@ $(document).ready(function(){
 });
 
 function initPage(){
-
+	'use strict';
 	
 	setTimeout(initSlider, 200);
 	setTimeout(hideLoader, 250);
 	setTimeout(landingAnimation, 2250);
-	console.log($(window).width());
+
 	if ( $(window).width() <= 425 ) {
 		$('body').find('br').remove();
+
+		$('header').on('click', function(){
+			$(this).toggleClass('open');
+		});
 	}
 }
 
 function hideLoader() {
+	'use strict';
 	TweenMax.fromTo('#loader .center .logo', 0.1, {opacity:0}, {opacity:1,repeat:1, yoyo:true, ease:Power1.easeInOut});
 	TweenMax.to('#loader', 0.1, {opacity:0,display:'none',ease:Expo.easeOut,delay:2,onComplete:function(){
 		$('body').removeClass('locked');
@@ -31,13 +36,15 @@ function hideLoader() {
 }
 
 function scrollTopFn() {
+	'use strict';
 	TweenMax.to(window, 1.5, {scrollTo:0,ease:Power3.easeOut});
 }
 
 function initSlider() {
+	'use strict';
 	var beforeChangeTl = new TimelineMax({paused:true});
 	var afterChangeTl = new TimelineMax({paused:true});
-	var textes, image;
+	var text, image;
 
 	// When init, set first slide visible : 
 	$('.slide-wrap').on('init', function(slick){

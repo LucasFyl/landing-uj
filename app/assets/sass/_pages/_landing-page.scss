@@ -49,6 +49,31 @@ header#landing-header {
 	top: 0; left: 0;right: 0;
 	width: 100%;
 
+	@include media($mobile) {
+		overflow: visible;
+		border-bottom: 1px solid #959595;
+
+		&:after {
+			content: " ";
+			@include size(6.5rem);
+			border-left: 1px solid #cccdcd;
+			position: absolute;
+			right: 0;
+			background:url('../images/asset-icon-menu.png') no-repeat center center;
+			background-size: 1.5rem;
+		}
+
+		&.open {
+			&:after {
+				background:url('../images/asset-icon-menu-close.png') no-repeat center center;
+				background-size: 1.5rem;
+			}
+			nav {
+				height: auto;
+			}
+		}
+	}
+
 	h1.logo {
 		@include center(horizontal);
 		margin-bottom: 0;
@@ -61,10 +86,26 @@ header#landing-header {
 		$grey: #959595;
 		position: absolute;
 		right: 0; top: 0;
+
+		@include media($mobile) {
+			width: 100vw;
+			top: 6.5rem;
+			background:white;
+			
+			height: 0;
+			overflow: hidden;
+		}
+
 		ul {
 			padding: 0;margin: 0;
 			display: flex;
 			list-style: none;
+
+			@include media($mobile) {
+				width: 100vw;
+				flex-flow: column;
+			}
+
 			li {
 				width: 13rem;
 				border-left: 1px solid darken(white, 10%);
@@ -72,6 +113,13 @@ header#landing-header {
 				text-align: center;
 				height: 6.5rem;
 				line-height: 6.5rem;
+
+				@include media($mobile) {
+					width: 100%;
+					&:last-child {
+						display: none;
+					}
+				}
 
 				a {
 					@include size(100%);
@@ -148,8 +196,10 @@ header#landing-header {
 			line-height: 1.8;
 			@include media($mobile) {
 				font-size: 20px;
-				max-width: 90%;
+				max-width: 85%;
 				margin: 0 auto;
+			    line-height: 1.5;
+
 			}
 		}
 		hr {
@@ -211,6 +261,20 @@ header#landing-header {
 		}
 		&.price {
 			background: #9cafae;
+			@include media($isMobile) {
+				background: #9cafae url(../images/asset-bg-pricebox-mobile.png) no-repeat center center;
+    			background-size: 50%;
+    			p {
+				    font-size: 1.8rem !important;
+    				line-height: 1.7 !important;
+    				&.big {
+    					font-size: 6.5rem !important;
+    				}
+    			}
+				.tilt {
+					display: none;
+				}
+			}
 		}
 		&:nth-child(8) {
 			background: url(../images/asset-bg-3.jpg) no-repeat center center;
@@ -351,7 +415,7 @@ footer {
 			margin: 0 auto 17rem;
 			letter-spacing: .65rem;
 		}
-		@include media($isMobile) {
+		@include media($mobile) {
 			padding-top: 0;
 			h4 {
 				margin: 11rem 0;
@@ -366,7 +430,7 @@ footer {
 		text-align: center;
 		min-width: 67rem;
 
-		@include media($isMobile) {
+		@include media($mobile) {
 			display: none;
 		}
 
@@ -439,7 +503,7 @@ footer {
 		border-top: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
 
-		@include media($isMobile) {
+		@include media($mobile) {
 			border: none;
 			flex-flow: column;
 		}
@@ -530,7 +594,7 @@ footer {
 					background-size: 2rem 1.75rem;
 				}
 
-				@include media($isMobile) {
+				@include media($mobile) {
 					padding-left: 0;
 					border: 1px solid #d2d2d2;
 					line-height: 7.8rem;
@@ -554,7 +618,7 @@ footer {
 		color: #959595;
 		text-decoration: none;
 		margin: 5rem auto;
-		@include media($isMobile) {
+		@include media($mobile) {
 			margin-bottom: 10rem;
 		}
 	}
