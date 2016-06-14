@@ -7,6 +7,9 @@
 
 	.modal-inner {
 		@include size(70vw 70vh);
+		@include media($mobile) {
+			@include size(80vw 80vh);
+		}
 		min-height: 280px;
 		background:white;
 
@@ -23,11 +26,20 @@
 			
 			background:url(../images/asset-popup.jpg) no-repeat center top;
 			background-size: cover;
+
+			@include media($mobile) {
+				display: none;
+			}
 		}
 		.modal-content {
 			width: 57%; height: 100%;
 			position: relative;
 			padding-left: 3rem;
+
+			@include media($mobile) {
+				width: 100%;
+				padding: 0 3rem;
+			}
 
 			.close-modal {
 				position: absolute;
@@ -35,6 +47,10 @@
 				top: 3rem;right: 3rem;
 				background:url(../images/asset-close-popup.png) no-repeat center center;
 				background-size: 2.15rem;
+				@include media($mobile) {
+					left: 50%; right: 50%;
+    				margin-left: -2rem;
+				}
 			}
 		}
 		
@@ -54,6 +70,9 @@
 				letter-spacing: .3rem;
 				margin-top: 0;
 				margin-bottom: 4rem !important;
+				@include media($mobile) {
+					font-size:30px !important;
+				}
 			}
 			p {
 				font-family: $book;
@@ -61,6 +80,14 @@
 				line-height: 2.5rem;
 				margin: 0;
 				letter-spacing: .1rem;
+				@include media($mobile) {
+					letter-spacing: 0;
+				}
+			}
+			@include media($mobile) {
+				h3, p {
+					text-align: center !important; 
+				}
 			}
 			.ck_description {
 				p:last-child {
@@ -72,8 +99,10 @@
 					display: none;
 				}
 			}
-			form {
-				display: flex;
+			@include media($desktop) {
+				form {
+					display: flex;
+				}
 			}
 			/* input */ 
 			.ck_email_address {  
@@ -85,6 +114,15 @@
 				padding-left: 5rem;
 				border: none;
 				@include BoxShadowHelper(1);
+
+				@include media($mobile) {
+					padding: 0 1rem;
+					border-radius: 3rem;
+					height: 5rem;
+					line-height:5rem;
+					text-align: center;
+					font-size:15px;
+				}
 			} 
 			/* button */
 			.ck_subscribe_button {
@@ -100,6 +138,15 @@
 				padding: 0;
 				background:$brand-main;
 				@include BoxShadowHelper(1);
+
+				@include media($mobile) {
+					width: 100% !important;
+					padding: 0 1rem;
+					border-radius: 3rem;
+					height: 5rem;
+					line-height:5rem;
+					text-align: center;
+				}
 			}
 			.ck_success_msg {
 				border: none;

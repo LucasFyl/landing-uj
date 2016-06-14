@@ -2564,6 +2564,12 @@ header > .top .logo::after {
   margin: auto;
   display: flex;
 }
+@media screen and (max-width: 480px) {
+  .modal-outer .modal-inner {
+    height: 80vh;
+    width: 80vw;
+  }
+}
 .modal-outer .modal-inner .image {
   overflow: hidden;
   min-height: 100%;
@@ -2571,11 +2577,22 @@ header > .top .logo::after {
   background: url(../images/asset-popup.jpg) no-repeat center top;
   background-size: cover;
 }
+@media screen and (max-width: 480px) {
+  .modal-outer .modal-inner .image {
+    display: none;
+  }
+}
 .modal-outer .modal-inner .modal-content {
   width: 57%;
   height: 100%;
   position: relative;
   padding-left: 3rem;
+}
+@media screen and (max-width: 480px) {
+  .modal-outer .modal-inner .modal-content {
+    width: 100%;
+    padding: 0 3rem;
+  }
 }
 .modal-outer .modal-inner .modal-content .close-modal {
   position: absolute;
@@ -2585,6 +2602,13 @@ header > .top .logo::after {
   right: 3rem;
   background: url(../images/asset-close-popup.png) no-repeat center center;
   background-size: 2.15rem;
+}
+@media screen and (max-width: 480px) {
+  .modal-outer .modal-inner .modal-content .close-modal {
+    left: 50%;
+    right: 50%;
+    margin-left: -2rem;
+  }
 }
 .modal-outer .modal-inner .ck_form.ck_minimal {
   background: transparent;
@@ -2606,6 +2630,11 @@ header > .top .logo::after {
   margin-top: 0;
   margin-bottom: 4rem !important;
 }
+@media screen and (max-width: 480px) {
+  .modal-outer .modal-inner .ck_form_fields h3 {
+    font-size: 30px !important;
+  }
+}
 .modal-outer .modal-inner .ck_form_fields p {
   font-family: "FuturaStdBook", sans-serif;
   font-size: 1.75rem;
@@ -2613,14 +2642,26 @@ header > .top .logo::after {
   margin: 0;
   letter-spacing: .1rem;
 }
+@media screen and (max-width: 480px) {
+  .modal-outer .modal-inner .ck_form_fields p {
+    letter-spacing: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .modal-outer .modal-inner .ck_form_fields h3, .modal-outer .modal-inner .ck_form_fields p {
+    text-align: center !important;
+  }
+}
 .modal-outer .modal-inner .ck_form_fields .ck_description p:last-child {
   margin-bottom: 4rem;
 }
 .modal-outer .modal-inner .ck_form_fields #ck_subscribe_form .ck_guarantee {
   display: none;
 }
-.modal-outer .modal-inner .ck_form_fields form {
-  display: flex;
+@media screen and (min-width: 480px) {
+  .modal-outer .modal-inner .ck_form_fields form {
+    display: flex;
+  }
 }
 .modal-outer .modal-inner .ck_form_fields .ck_email_address {
   width: 100%;
@@ -2631,6 +2672,16 @@ header > .top .logo::after {
   padding-left: 5rem;
   border: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+@media screen and (max-width: 480px) {
+  .modal-outer .modal-inner .ck_form_fields .ck_email_address {
+    padding: 0 1rem;
+    border-radius: 3rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 15px;
+  }
 }
 .modal-outer .modal-inner .ck_form_fields .ck_subscribe_button {
   min-width: 0;
@@ -2645,6 +2696,16 @@ header > .top .logo::after {
   padding: 0;
   background: #597981;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+@media screen and (max-width: 480px) {
+  .modal-outer .modal-inner .ck_form_fields .ck_subscribe_button {
+    width: 100% !important;
+    padding: 0 1rem;
+    border-radius: 3rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+  }
 }
 .modal-outer .modal-inner .ck_form_fields .ck_success_msg {
   border: none;
