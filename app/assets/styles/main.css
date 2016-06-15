@@ -634,10 +634,10 @@ th {
   src: url("../fonts/FuturaStdMedium.eot") format("embedded-opentype"), url("../fonts/FuturaStdMedium.woff2") format("woff2"), url("../fonts/FuturaStdMedium.woff") format("woff"), url("../fonts/FuturaStdMedium.ttf") format("truetype"), url("../fonts/FuturaStdMedium.svg#FuturaStdMedium") format("svg");
 }
 @font-face {
-  font-family: 'FuturaStdHeavy';
-  src: url("../fonts/FuturaStdHeavy.eot");
-  src: url("../fonts/FuturaStdHeavy.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaStdHeavy.woff2") format("woff2"), url("../fonts/FuturaStdHeavy.woff") format("woff"), url("../fonts/FuturaStdHeavy.ttf") format("truetype"), url("../fonts/FuturaStdHeavy.svg#FuturaStdHeavy") format("svg");
-  font-weight: 900;
+  font-family: 'FuturaMedium';
+  src: url("../fonts/hinted-FuturaMedium.eot");
+  src: url("../fonts/hinted-FuturaMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-FuturaMedium.woff2") format("woff2"), url("../fonts/hinted-FuturaMedium.woff") format("woff"), url("../fonts/hinted-FuturaMedium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -2999,6 +2999,11 @@ header > .top .logo::after {
 #tools-slider {
   position: relative;
 }
+@media screen and (max-width: 480px) {
+  #tools-slider {
+    min-height: 550px;
+  }
+}
 #tools-slider .slide {
   height: 65.5rem;
   width: 100vw;
@@ -3331,7 +3336,7 @@ header#landing-header nav ul li a:hover {
 }
 @media screen and (max-width: 480px) {
   #outer-wrap section .center-block p {
-    max-width: 300px;
+    max-width: 320px;
   }
   #outer-wrap section .center-block p:last-child {
     margin-bottom: 0;
@@ -3362,6 +3367,7 @@ header#landing-header nav ul li a:hover {
 @media screen and (max-width: 480px) {
   #outer-wrap section:nth-child(4) {
     background: url(../images/asset-bg-1-mobile.jpg) no-repeat center center;
+    background-size: cover;
   }
 }
 #outer-wrap section:nth-child(4) .center-block h2,
@@ -3375,6 +3381,11 @@ header#landing-header nav ul li a:hover {
 }
 #outer-wrap section:nth-child(5) {
   background: #d2c4ba;
+}
+@media screen and (max-width: 480px) {
+  #outer-wrap section:nth-child(5) h2.main span {
+    font-size: 21px;
+  }
 }
 #outer-wrap section:nth-child(6) {
   background: url(../images/asset-bg-2.jpg) no-repeat center center;
@@ -3432,6 +3443,24 @@ header#landing-header nav ul li a:hover {
 #outer-wrap section:nth-child(8) p {
   max-width: 85rem;
 }
+@media screen and (max-width: 480px) {
+  #outer-wrap section:nth-child(8) {
+    background-position: top left;
+  }
+  #outer-wrap section:nth-child(8):before {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.15);
+    transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+}
 #outer-wrap section.landing {
   height: 100vh;
   background: url(../images/asset-landing.jpg) no-repeat center center;
@@ -3466,8 +3495,10 @@ header#landing-header nav ul li a:hover {
 #outer-wrap section.landing:before {
   transition: all 3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
-#outer-wrap section.landing h2.main + p {
-  max-width: 235px;
+@media screen and (max-width: 480px) {
+  #outer-wrap section.landing h2.main + p {
+    max-width: 235px;
+  }
 }
 #outer-wrap section.landing .btn, #outer-wrap section.landing input[type="button"],
 #outer-wrap section.landing button[type="submit"] {
@@ -3485,23 +3516,6 @@ header#landing-header nav ul li a:hover {
   color: white;
   text-transform: uppercase;
   letter-spacing: .25rem;
-}
-#outer-wrap section.landing p.scrolldown:before {
-  content: " ";
-  height: 5rem;
-  width: 0.1rem;
-  background: white;
-  bottom: 0;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  position: fixed;
-  z-index: 9999;
-}
-@media screen and (max-width: 1350px) {
-  #outer-wrap section.landing p.scrolldown:before {
-    width: .2rem;
-  }
 }
 #outer-wrap section.tools {
   height: auto;
@@ -3556,8 +3570,18 @@ header#landing-header nav ul li a:hover {
   margin-bottom: 3rem;
 }
 #outer-wrap section.price p.big {
-  font-family: 'FuturaStdMedium', sans-serif;
+  font-family: 'FuturaMedium', sans-serif;
   font-size: 7.5rem;
+  letter-spacing: .5rem;
+}
+@media screen and (max-width: 480px) {
+  #outer-wrap section.price p.big {
+    margin: 5rem auto;
+  }
+}
+#outer-wrap section.price .btn, #outer-wrap section.price input[type="button"],
+#outer-wrap section.price button[type="submit"] {
+  width: 21.5rem;
 }
 
 footer {

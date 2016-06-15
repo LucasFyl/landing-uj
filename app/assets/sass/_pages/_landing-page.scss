@@ -3,6 +3,8 @@ body {
 
 	@include size(100%);
 	max-width: 100vw;
+
+	
 	&.locked {
 		@include size(100%);
 		position: fixed;
@@ -208,7 +210,7 @@ header#landing-header {
 
 		@include media($mobile) {
 			.center-block p {
-				max-width: 300px;
+				max-width: 320px;
 				&:last-child {
 					margin-bottom: 0;
 				}
@@ -238,6 +240,7 @@ header#landing-header {
 			background-size: cover;
 			@include media($mobile) {
 				background: url(../images/asset-bg-1-mobile.jpg) no-repeat center center;
+				background-size: cover;
 			}
 			.center-block {
 				h2, 
@@ -253,6 +256,11 @@ header#landing-header {
 		}
 		&:nth-child(5) {
 			background: #d2c4ba;
+			h2.main span {
+				@include media($mobile) {
+					font-size: 21px;
+				}
+			}
 		}
 		&:nth-child(6) {
 			background: url(../images/asset-bg-2.jpg) no-repeat center center;
@@ -281,6 +289,10 @@ header#landing-header {
 			background-size: cover;
 	    	@include overlay(rgba(0,0,0,0.12));
 	    	p {max-width: 85rem;}
+	    	@include media($mobile) {
+	    		background-position: top left;
+		    	@include overlay(rgba(0,0,0,0.15));
+	    	}
 		}
 		
 	}
@@ -295,8 +307,10 @@ header#landing-header {
 		&:before {
 	    	@include transition(all 3s $ease-in-out-sine);
 		}
-		h2.main + p {
-			max-width: 235px;
+		@include media($mobile) {
+			h2.main + p {
+				max-width: 235px;
+			}
 		}
 	    .btn {
 	    	margin-top: 6.5rem;
@@ -315,19 +329,19 @@ header#landing-header {
 	    	text-transform: uppercase;
 	    	letter-spacing: .25rem;
 
-			&:before {
-	    		content: " ";
-	    		@include size(.1rem 5rem);
-	    		background:white;
+			// &:before {
+	  //   		content: " ";
+	  //   		@include size(.1rem 5rem);
+	  //   		background:white;
 
-	    		bottom: 0;
-	    		@include center(horizontal);
-	    		position: fixed;
-	    		z-index: 9999;
-	    		@include media(max-width 1350px) {
-	    			width: .2rem;
-	    		}
-	    	}
+	  //   		bottom: 0;
+	  //   		@include center(horizontal);
+	  //   		position: fixed;
+	  //   		z-index: 9999;
+	  //   		@include media(max-width 1350px) {
+	  //   			width: .2rem;
+	  //   		}
+	  //   	}
 	    }
 	}
 	// section.landing + section {
@@ -391,11 +405,16 @@ header#landing-header {
 			margin-bottom: 3rem;
 
 			&.big {
-				font-family: 'FuturaStdMedium', sans-serif;
+				font-family: 'FuturaMedium', sans-serif;
 				font-size: 7.5rem;
+				letter-spacing: .5rem;
+				@include media($mobile) {
+					margin: 5rem auto;
+				}
 			}
 		}
 		.btn {
+			width: 21.5rem;
 		}
 	}
 }

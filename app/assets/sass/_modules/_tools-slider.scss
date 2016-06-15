@@ -316,6 +316,9 @@
 
 #tools-slider {
   position: relative;
+  @include media($mobile) {
+    min-height: 550px;
+  }
 
   .slide {
     @include size(100vw 65.5rem);

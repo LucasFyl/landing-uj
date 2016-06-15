@@ -29,8 +29,8 @@ function initPage(){
 
 function hideLoader() {
 	'use strict';
-	TweenMax.fromTo('#loader .center .logo', 0.1, {opacity:0}, {opacity:1,repeat:1, yoyo:true, ease:Power1.easeInOut});
-	TweenMax.to('#loader', 0.1, {opacity:0,display:'none',ease:Expo.easeOut,delay:2,onComplete:function(){
+	TweenMax.fromTo('#loader .center .logo', 0.75, {opacity:0}, {opacity:1,repeat:1, yoyo:true, ease:Power1.easeInOut});
+	TweenMax.to('#loader', 0.5, {opacity:0,display:'none',ease:Expo.easeOut,delay:2,onComplete:function(){
 		$('body').removeClass('locked');
 	}});
 }
