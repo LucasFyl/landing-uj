@@ -641,6 +641,13 @@ th {
   font-style: normal;
 }
 @font-face {
+  font-family: 'FuturaStdHeavy';
+  src: url("../fonts/FuturaStdHeavy.eot");
+  src: url("../fonts/FuturaStdHeavy.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaStdHeavy.woff2") format("woff2"), url("../fonts/FuturaStdHeavy.woff") format("woff"), url("../fonts/FuturaStdHeavy.ttf") format("truetype"), url("../fonts/FuturaStdHeavy.svg#FuturaStdHeavy") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
   font-family: 'FuturaStdBook';
   src: url("../fonts/FuturaStdBook.eot");
   src: url("../fonts/FuturaStdBook.eot") format("embedded-opentype"), url("../fonts/FuturaStdBook.woff2") format("woff2"), url("../fonts/FuturaStdBook.woff") format("woff"), url("../fonts/FuturaStdBook.ttf") format("truetype"), url("../fonts/FuturaStdBook.svg#FuturaStdBook") format("svg");
@@ -3015,7 +3022,6 @@ header > .top .logo::after {
 }
 @media screen and (max-width: 768px) {
   #tools-slider .slide {
-    height: auto;
     padding: 0;
     flex-flow: column;
   }
@@ -3070,6 +3076,11 @@ header > .top .logo::after {
   #tools-slider .slide div.left p {
     font-size: 1.7rem;
     text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  #tools-slider .slide .right {
+    margin-top: -30rem;
   }
 }
 #tools-slider .slide .right img {
@@ -3404,6 +3415,11 @@ header#landing-header nav ul li a:hover {
   background: rgba(0, 0, 0, 0.3);
   transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
+@media screen and (max-width: 480px) {
+  #outer-wrap section:nth-child(6) h2.main {
+    max-width: 240px;
+  }
+}
 #outer-wrap section.price {
   background: #9cafae;
 }
@@ -3516,6 +3532,11 @@ header#landing-header nav ul li a:hover {
   color: white;
   text-transform: uppercase;
   letter-spacing: .25rem;
+}
+@media screen and (max-width: 480px) {
+  #outer-wrap section.landing p.scrolldown {
+    bottom: 10rem;
+  }
 }
 #outer-wrap section.tools {
   height: auto;

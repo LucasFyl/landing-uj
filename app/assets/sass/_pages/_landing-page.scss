@@ -4,7 +4,7 @@ body {
 	@include size(100%);
 	max-width: 100vw;
 
-	
+
 	&.locked {
 		@include size(100%);
 		position: fixed;
@@ -266,6 +266,10 @@ header#landing-header {
 			background: url(../images/asset-bg-2.jpg) no-repeat center center;
 	    	@include overlay(rgba(0,0,0,0.3));
 			background-size: cover;
+
+			@include media($mobile) {
+				h2.main {max-width: 240px;}
+			}
 		}
 		&.price {
 			background: #9cafae;
@@ -328,6 +332,10 @@ header#landing-header {
 	    	color: white;
 	    	text-transform: uppercase;
 	    	letter-spacing: .25rem;
+
+	    	@include media($mobile) {
+	    		bottom: 10rem;
+	    	}
 
 			// &:before {
 	  //   		content: " ";
