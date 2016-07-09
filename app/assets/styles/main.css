@@ -2571,7 +2571,7 @@ header > .top .logo::after {
   margin: auto;
   display: flex;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal-outer .modal-inner {
     height: 80vh;
     width: 80vw;
@@ -2584,7 +2584,7 @@ header > .top .logo::after {
   background: url(../images/asset-popup.jpg) no-repeat center top;
   background-size: cover;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal-outer .modal-inner .image {
     display: none;
   }
@@ -2595,7 +2595,7 @@ header > .top .logo::after {
   position: relative;
   padding-left: 3rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal-outer .modal-inner .modal-content {
     width: 100%;
     padding: 0 3rem;
@@ -2610,7 +2610,7 @@ header > .top .logo::after {
   background: url(../images/asset-close-popup.png) no-repeat center center;
   background-size: 2.15rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal-outer .modal-inner .modal-content .close-modal {
     left: 50%;
     right: 50%;
@@ -2637,7 +2637,7 @@ header > .top .logo::after {
   margin-top: 0;
   margin-bottom: 4rem !important;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal-outer .modal-inner .ck_form_fields h3 {
     font-size: 30px !important;
   }
@@ -2649,21 +2649,35 @@ header > .top .logo::after {
   margin: 0;
   letter-spacing: .1rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal-outer .modal-inner .ck_form_fields p {
     letter-spacing: 0;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal-outer .modal-inner .ck_form_fields h3, .modal-outer .modal-inner .ck_form_fields p {
     text-align: center !important;
   }
+}
+.modal-outer .modal-inner .ck_form_fields #ck_success_msg {
+  padding: 2rem;
 }
 .modal-outer .modal-inner .ck_form_fields .ck_description p:last-child {
   margin-bottom: 4rem;
 }
 .modal-outer .modal-inner .ck_form_fields #ck_subscribe_form .ck_guarantee {
   display: none;
+}
+@media screen and (max-width: 768px) {
+  .modal-outer .modal-inner .ck_form_fields #ck_subscribe_form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .modal-outer .modal-inner .ck_form_fields #ck_subscribe_form .ck_email_field_group {
+    width: 100%;
+    max-width: 350px;
+  }
 }
 @media screen and (min-width: 480px) {
   .modal-outer .modal-inner .ck_form_fields form {
@@ -2680,7 +2694,7 @@ header > .top .logo::after {
   border: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal-outer .modal-inner .ck_form_fields .ck_email_address {
     padding: 0 1rem;
     border-radius: 3rem;
@@ -2688,6 +2702,9 @@ header > .top .logo::after {
     line-height: 5rem;
     text-align: center;
     font-size: 15px;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto 1.5rem;
   }
 }
 .modal-outer .modal-inner .ck_form_fields .ck_subscribe_button {
@@ -2704,7 +2721,7 @@ header > .top .logo::after {
   background: #597981;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal-outer .modal-inner .ck_form_fields .ck_subscribe_button {
     width: 100% !important;
     padding: 0 1rem;
@@ -2712,11 +2729,9 @@ header > .top .logo::after {
     height: 5rem;
     line-height: 5rem;
     text-align: center;
+    max-width: 350px;
+    margin: 0 auto;
   }
-}
-.modal-outer .modal-inner .ck_form_fields .ck_success_msg {
-  border: none;
-  background: transparent;
 }
 
 #tools-menu {
@@ -3012,8 +3027,6 @@ header > .top .logo::after {
   }
 }
 #tools-slider .slide {
-  height: 65.5rem;
-  width: 100vw;
   padding-top: 10rem;
   padding-bottom: 10rem;
   display: flex;
@@ -3034,6 +3047,7 @@ header > .top .logo::after {
 @media screen and (max-width: 768px) {
   #tools-slider .slide > div {
     width: 100%;
+    height: initial;
   }
 }
 #tools-slider .slide div.left {
@@ -3078,23 +3092,15 @@ header > .top .logo::after {
     text-align: center;
   }
 }
-@media screen and (max-width: 480px) {
-  #tools-slider .slide .right {
-    margin-top: -30rem;
-  }
-}
 #tools-slider .slide .right img {
   box-shadow: 0.75rem 0.75rem 5rem 0.3rem rgba(0, 0, 0, 0.2);
   position: relative;
   margin: 5rem 0;
   margin-left: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   #tools-slider .slide .right img {
     margin: 0;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 #tools-slider .slide p, #tools-slider .slide h4, #tools-slider .slide img {
@@ -3183,6 +3189,11 @@ body .outer-title span {
   background: url("../images/asset-icon-scrolltop.png") no-repeat center center;
   background-size: 1.2rem 0.75rem;
 }
+@media screen and (max-width: 480px) {
+  #scrolltop {
+    display: none;
+  }
+}
 
 header#landing-header {
   height: 6.5rem;
@@ -3194,7 +3205,7 @@ header#landing-header {
   right: 0;
   width: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   header#landing-header {
     overflow: visible;
     border-bottom: 1px solid #959595;
@@ -3230,7 +3241,7 @@ header#landing-header nav {
   right: 0;
   top: 0;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   header#landing-header nav {
     width: 100vw;
     top: 6.5rem;
@@ -3258,7 +3269,7 @@ header#landing-header nav ul li {
   height: 6.5rem;
   line-height: 6.5rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   header#landing-header nav ul li {
     width: 100%;
   }
@@ -3353,16 +3364,22 @@ header#landing-header nav ul li a:hover {
     margin-bottom: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  #outer-wrap section:first-child h2.main {
+    font-size: 25px;
+  }
+}
 #outer-wrap section:nth-child(2) {
   background: #aeaead;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 768px) {
   #outer-wrap section:nth-child(2) h2.main {
-    font-size: 4.5rem;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 480px) {
   #outer-wrap section:nth-child(2) h2.main {
+    font-size: 21px;
     max-width: 305px;
   }
 }
@@ -3621,7 +3638,7 @@ footer .logo-block h4 {
   margin: 0 auto 17rem;
   letter-spacing: .65rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   footer .logo-block {
     padding-top: 0;
   }
@@ -3639,7 +3656,7 @@ footer .newsletter {
 footer .newsletter > div {
   width: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   footer .newsletter {
     display: none;
   }
@@ -3723,7 +3740,7 @@ footer section.links {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   footer section.links {
     border: none;
     flex-flow: column;
@@ -3822,7 +3839,7 @@ footer section.links .email a .icon {
   background: url("../images/asset-icon-email.png") no-repeat left center;
   background-size: 2rem 1.75rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   footer section.links .email a {
     padding-left: 0;
     border: 1px solid #d2d2d2;
@@ -3843,7 +3860,7 @@ footer > p:last-child {
   text-decoration: none;
   margin: 5rem auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   footer > p:last-child {
     margin-bottom: 10rem;
   }

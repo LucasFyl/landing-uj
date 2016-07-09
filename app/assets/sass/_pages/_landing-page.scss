@@ -42,6 +42,9 @@ body {
 		background:url('../images/asset-icon-scrolltop.png') no-repeat center center;
 		background-size: 1.2rem 0.75rem;
 	}
+	@include media($mobile) {
+		display: none;
+	}
 }
 header#landing-header {
 	height: 6.5rem;
@@ -51,7 +54,7 @@ header#landing-header {
 	top: 0; left: 0;right: 0;
 	width: 100%;
 
-	@include media($mobile) {
+	@include media($isMobile) {
 		overflow: visible;
 		border-bottom: 1px solid #959595;
 
@@ -89,7 +92,7 @@ header#landing-header {
 		position: absolute;
 		right: 0; top: 0;
 
-		@include media($mobile) {
+		@include media($isMobile) {
 			width: 100vw;
 			top: 6.5rem;
 			background:white;
@@ -116,7 +119,7 @@ header#landing-header {
 				height: 6.5rem;
 				line-height: 6.5rem;
 
-				@include media($mobile) {
+				@include media($isMobile) {
 					width: 100%;
 					&:last-child {
 						display: none;
@@ -171,6 +174,7 @@ header#landing-header {
 			@include media($mobile) {
 				font-size: 16px;
 			}
+
 		}
 		h2.main {
 			text-transform: uppercase;
@@ -216,15 +220,23 @@ header#landing-header {
 				}
 			}
 		}
-			
+		
+		&:first-child {
+			h2.main {
+				@include media($isMobile) {
+					font-size: 25px;
+				}
+			}
+		}	
 
 		&:nth-child(2) {
 			background: #aeaead;
 			h2.main {
-				@include media($desktop) {
-					font-size:4.5rem;
+				@include media($isMobile) {
+					font-size: 18px;
 				}
 				@include media($mobile) {
+					font-size: 21px;
 					max-width: 305px;
 				}
 			}
@@ -442,7 +454,7 @@ footer {
 			margin: 0 auto 17rem;
 			letter-spacing: .65rem;
 		}
-		@include media($mobile) {
+		@include media($isMobile) {
 			padding-top: 0;
 			h4 {
 				margin: 11rem 0;
@@ -457,7 +469,7 @@ footer {
 		text-align: center;
 		min-width: 67rem;
 
-		@include media($mobile) {
+		@include media($isMobile) {
 			display: none;
 		}
 
@@ -530,7 +542,7 @@ footer {
 		border-top: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
 
-		@include media($mobile) {
+		@include media($isMobile) {
 			border: none;
 			flex-flow: column;
 		}
@@ -621,7 +633,7 @@ footer {
 					background-size: 2rem 1.75rem;
 				}
 
-				@include media($mobile) {
+				@include media($isMobile) {
 					padding-left: 0;
 					border: 1px solid #d2d2d2;
 					line-height: 7.8rem;
@@ -645,7 +657,7 @@ footer {
 		color: #959595;
 		text-decoration: none;
 		margin: 5rem auto;
-		@include media($mobile) {
+		@include media($isMobile) {
 			margin-bottom: 10rem;
 		}
 	}

@@ -321,7 +321,6 @@
   }
 
   .slide {
-    @include size(100vw 65.5rem);
     padding-top: 10rem;
     padding-bottom: 10rem;
     display: flex;
@@ -339,6 +338,7 @@
 
       @include media($isMobile) {
         width: 100%;
+        height: initial;
       }
     }
 
@@ -384,19 +384,14 @@
         }
       }
     }
-    .right {
-      @include media($mobile) {
-        margin-top: -30rem;
-      }
-    }
     .right img {
       box-shadow: 0.75rem 0.75rem 5rem .3rem rgba(0,0,0,0.2);
       position: relative;
       margin: 5rem 0;
       margin-left: 3rem;
-      @include media($medium) {
+      @include media($large) {
         margin: 0;
-        @include center(vertical);
+        // @include center(vertical);
       }
     }
 

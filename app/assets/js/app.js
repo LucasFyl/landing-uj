@@ -18,7 +18,7 @@ function initPage(){
 	setTimeout(hideLoader, 250);
 	setTimeout(landingAnimation, 2250);
 
-	if ( $(window).width() <= 425 ) {
+	if ( $(window).width() <= 480 ) {
 		$('body').find('br').remove();
 
 		$('header').on('click', function(){
