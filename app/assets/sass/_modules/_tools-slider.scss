@@ -54,6 +54,10 @@
           display: block;
           width: 100vw;
           height: 6rem;
+
+          .circle, .page-title {
+            display: none !important;
+          }
         }
       }
 

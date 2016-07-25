@@ -2788,6 +2788,9 @@ header > .top .logo::after {
     width: 100vw;
     height: 6rem;
   }
+  #tools-menu ul li.active .circle, #tools-menu ul li.active .page-title {
+    display: none !important;
+  }
 }
 #tools-menu ul li a {
   position: relative;
@@ -3158,6 +3161,7 @@ body .outer-title {
   display: block;
   position: relative;
   overflow: hidden;
+  padding-top: 0.75rem;
 }
 body .outer-title span {
   display: block;
@@ -3334,7 +3338,7 @@ header#landing-header nav ul li a:hover {
 }
 @media screen and (max-width: 480px) {
   #outer-wrap section h2.main {
-    font-size: 25px;
+    font-size: 24px;
     letter-spacing: .15rem;
     max-width: 295px;
     margin: 0 auto;
@@ -3371,6 +3375,9 @@ header#landing-header nav ul li a:hover {
 }
 #outer-wrap section:nth-child(2) {
   background: #aeaead;
+}
+#outer-wrap section:nth-child(2) h2.main:nth-child(2) {
+  letter-spacing: .06rem;
 }
 @media screen and (max-width: 768px) {
   #outer-wrap section:nth-child(2) h2.main {

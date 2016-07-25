@@ -19,6 +19,7 @@ body {
 		display: block; 
 		position: relative;
 		overflow: hidden;
+		padding-top: 0.75rem;
 		span {
 			display: block;
 			@include transform(translateY(100%));
@@ -191,7 +192,7 @@ header#landing-header {
 			}
 
 			@include media($mobile) {
-				font-size: 25px;
+				font-size: 24px;
 				letter-spacing: .15rem;
 				max-width: 295px;
 				margin: 0 auto;
@@ -232,6 +233,9 @@ header#landing-header {
 		&:nth-child(2) {
 			background: #aeaead;
 			h2.main {
+				&:nth-child(2) {
+					letter-spacing: .06rem;
+				}
 				@include media($isMobile) {
 					font-size: 18px;
 				}
