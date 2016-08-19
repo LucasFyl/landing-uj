@@ -1,10 +1,10 @@
 {
   "name": "Union landing",
-  "homepage": "https://github.com/LucasFyl/quentinvasseur",
+  "homepage": "unionjane.co",
   "authors": [
     "Lucas Fayolle <lfayolle1@gmail.com>"
   ],
-  "description": "Portfolio 2016 - Quentin Vasseur",
+  "description": "Union Jane",
   "main": "app/index.php",
   "moduleType": [
     "amd",
